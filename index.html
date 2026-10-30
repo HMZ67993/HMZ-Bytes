@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HMZ-Bytes — Desktop software that keeps your files on your PC | برامج مكتبية تحفظ ملفاتك على جهازك</title>
+<meta name="description" content="Offline Windows desktop tools by Hamza Mansour. English & Arabic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{navy:'#0A1128',ink:'#111C38',sky:'#0EA5E9'},fontFamily:{sans:['Cairo','system-ui','sans-serif']}}}}</script>
+<style>
+html{scroll-behavior:smooth}
+.ltr{direction:ltr;unicode-bidi:embed}
+:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased">
+
+<header class="sticky top-0 z-40 bg-navy/95 backdrop-blur text-white border-b border-slate-800">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
+    <a href="#top" class="flex items-center gap-2.5 font-extrabold text-lg">
+      <span class="ltr w-9 h-9 rounded-lg bg-sky grid place-items-center text-sm">HMZ</span>HMZ-Bytes
+    </a>
+    <nav id="nav" class="hidden md:flex gap-5 text-sm text-slate-300"></nav>
+    <div class="flex items-center gap-2">
+      <button id="lang" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold"></button>
+      <a href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" id="storeBtn" class="px-3.5 py-2 rounded-lg bg-sky hover:bg-sky/90 text-xs font-bold"></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="bg-navy text-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24">
+      <h1 id="heroT" class="text-3xl sm:text-5xl font-extrabold leading-tight max-w-3xl"></h1>
+      <p id="heroS" class="mt-5 text-slate-300 text-base sm:text-lg max-w-2xl"></p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#products" id="heroA" class="px-6 py-3 rounded-xl bg-sky font-bold text-sm"></a>
+        <a href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" id="heroB" class="px-6 py-3 rounded-xl bg-slate-800 border border-slate-700 font-bold text-sm"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="max-w-6xl mx-auto px-4 py-14">
+    <h2 id="prodT" class="text-2xl font-extrabold"></h2>
+    <p id="prodS" class="text-slate-600 mt-1 mb-8 text-sm"></p>
+    <div id="grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </section>
+
+  <section id="videos" class="bg-white border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-14">
+      <h2 id="vidT" class="text-2xl font-extrabold mb-6"></h2>
+      <div id="vids" class="grid gap-6 md:grid-cols-2"></div>
+    </div>
+  </section>
+
+  <section id="about" class="max-w-4xl mx-auto px-4 py-14">
+    <h2 id="aboutT" class="text-2xl font-extrabold mb-4"></h2>
+    <p id="aboutP" class="text-slate-700 leading-relaxed"></p>
+    <div id="pillars" class="mt-8 grid gap-4 sm:grid-cols-3"></div>
+  </section>
+
+  <section id="faq" class="bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 py-14">
+      <h2 id="faqT" class="text-2xl font-extrabold mb-6"></h2>
+      <div id="faqList" class="space-y-3"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-navy text-slate-400 text-sm">
+  <div class="max-w-6xl mx-auto px-4 py-10 grid gap-6 md:grid-cols-3">
+    <div><div class="text-white font-bold mb-2">HMZ-Bytes</div><p id="fBio" class="text-xs leading-relaxed"></p></div>
+    <div><div id="fPrivT" class="text-white font-bold mb-2"></div><p id="fPriv" class="text-xs leading-relaxed"></p></div>
+    <div><div id="fPayT" class="text-white font-bold mb-2"></div><p id="fPay" class="text-xs leading-relaxed"></p></div>
+  </div>
+  <div class="border-t border-slate-800 text-center text-xs py-4">© 2026 HMZ-Bytes (Hamza Mansour)</div>
+</footer>
+
+<div id="modal" class="hidden fixed inset-0 z-50 bg-black/70 p-4 overflow-y-auto" role="dialog" aria-modal="true">
+  <div class="bg-white rounded-2xl max-w-3xl mx-auto my-6 overflow-hidden">
+    <div class="bg-navy text-white px-5 py-4 flex justify-between items-center">
+      <h3 id="mT" class="font-bold text-lg"></h3>
+      <button id="mX" class="text-2xl leading-none px-2" aria-label="Close">×</button>
+    </div>
+    <div id="mB" class="p-5 space-y-5"></div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   EDIT HERE — product data.
+   status: 'live' (buy button on)  |  'soon' (buy button off)
+   url:    exact Gumroad product link (only needed when status is 'live')
+   shots:  screenshots, e.g. ['images/pdf-1.png','images/pdf-2.png']
+   yt:     YouTube video ID, e.g. 'dQw4w9WgXcQ' (the part after v=)
+   ===================================================================== */
+const STORE = 'https://hmzbytes.gumroad.com/';
+const PRODUCTS = [
+ { id:'pdf', status:'live', price:'$4.99+', url:'https://hmzbytes.gumroad.com/l/PDF-Toolkit-pro', shots:[], yt:'',
+   n:{en:'PDF Toolkit Pro',ar:'PDF Toolkit Pro'},
+   t:{en:'Edit your PDFs fully offline on your own computer.',ar:'عدّل ملفات PDF بالكامل على جهازك وبدون إنترنت.'},
+   f:{en:['Merge PDFs, extract page ranges, delete and rotate pages','Smart compression for email and archiving','Images to PDF, and PDF pages to JPG/PNG','AES-256 password protection, text watermarks, page numbers','Extract text to TXT and view document info','English / Arabic interface, light and dark themes'],
+      ar:['دمج ملفات PDF واستخراج نطاقات صفحات وحذف وتدوير الصفحات','ضغط ذكي للإرسال بالبريد والأرشفة','تحويل الصور إلى PDF وصفحات PDF إلى JPG/PNG','حماية بكلمة مرور AES-256 وعلامات مائية نصية وترقيم الصفحات','استخراج النص إلى TXT وعرض معلومات الملف','واجهة عربية / إنجليزية ووضع فاتح وداكن']}},
+ { id:'omni', status:'live', price:'$0.99+', url:'https://hmzbytes.gumroad.com/l/OmniCalc-Studio', shots:[], yt:'',
+   n:{en:'OmniCalc Studio',ar:'OmniCalc Studio'},
+   t:{en:'Calculator, accounting tape and unit converter in one window.',ar:'حاسبة وشريط محاسبي ومحول وحدات في نافذة واحدة.'},
+   f:{en:['Live result while you type, with percentages and parentheses','Scientific mode (DEG/RAD, logs, powers, roots, factorial, memory)','Accounting tape with tax and discount, export to TXT','Converts storage, speed, length, weight, area, volume, time and temperature at once','Window sizes S / M / L / XL, 6 accent themes, always-on-top pin'],
+      ar:['نتيجة فورية أثناء الكتابة مع النسب المئوية والأقواس','وضع علمي (درجات/راديان، لوغاريتمات، أسس، جذور، مضروب، ذاكرة)','شريط محاسبي مع الضريبة والخصم وتصدير إلى TXT','تحويل السعة والسرعة والطول والوزن والمساحة والحجم والوقت والحرارة معاً','أحجام نافذة S / M / L / XL و6 ألوان وتثبيت فوق النوافذ']}},
+ { id:'hub', status:'soon', price:'', url:'', shots:[], yt:'',
+   n:{en:'Smart File Hub',ar:'Smart File Hub'},
+   t:{en:'Sort crowded folders and batch-rename thousands of files.',ar:'رتّب المجلدات المزدحمة وأعد تسمية آلاف الملفات دفعة واحدة.'},
+   f:{en:['Sort crowded folders','Batch-rename thousands of files','Remove duplicates','Undo operations safely'],
+      ar:['ترتيب المجلدات المزدحمة','إعادة تسمية آلاف الملفات دفعة واحدة','إزالة التكرارات','التراجع الآمن عن العمليات']}},
+ { id:'cast', status:'soon', price:'', url:'', shots:[], yt:'',
+   n:{en:'Screen Cast Pro',ar:'Screen Cast Pro'},
+   t:{en:'Screen recording built for courses, tutorials and walkthroughs.',ar:'تسجيل شاشة مصمم للدورات والشروحات التعليمية.'},
+   f:{en:[],ar:[]}},
+ { id:'img', status:'soon', price:'', url:'', shots:[], yt:'',
+   n:{en:'Image Toolkit Pro',ar:'Image Toolkit Pro'},
+   t:{en:'Image tools for your desktop.',ar:'أدوات صور لسطح المكتب.'},
+   f:{en:[],ar:[]}},
+ { id:'vid', status:'soon', price:'', url:'', shots:[], yt:'',
+   n:{en:'Video Studio',ar:'Video Studio'},
+   t:{en:'Video tools for your desktop.',ar:'أدوات فيديو لسطح المكتب.'},
+   f:{en:[],ar:[]}}
+];
+
+const UI = {
+ en:{lang:'العربية',store:'Gumroad store',nav:['Products','Videos','About','FAQ'],
+  heroT:'Desktop software that saves time and keeps your files on your PC.',
+  heroS:'Simple tools that work offline, never send your files anywhere, and support both English and Arabic.',
+  heroA:'See the software',heroB:'Open the Gumroad store',
+  prodT:'Software',prodS:'Available now and coming soon. Purchases are handled on Gumroad.',
+  vidT:'Videos',vidNone:'Demo videos will appear here soon.',
+  details:'Details',buy:'Buy on Gumroad',soon:'Coming soon',live:'Available',
+  featT:'Features',noFeat:'Full details will be added at release.',shotT:'Screenshots',vidOne:'Video',
+  aboutT:'About HMZ-Bytes',
+  aboutP:"Hi, I'm Hamza. I create software and digital products that save you time and keep your data safe. My tools are built on one idea: they should be simple to use, work offline, and never send your files anywhere.",
+  pillars:[['Local processing','Files are processed on your computer, not on a server.'],['English and Arabic','Left-to-right and right-to-left layouts in the apps.'],['Direct support','Questions or ideas? Message me on Gumroad.']],
+  faqT:'FAQ',
+  faq:[['How do I buy?','Click “Buy on Gumroad” on any available product. You pay on Gumroad and get your download link and license key there.'],
+       ['Do the apps work offline?','Yes. File processing happens on your computer. An internet connection is needed only to verify and activate your license.'],
+       ['Can I use the apps in Arabic?','Yes. The apps switch between English and Arabic, with light and dark themes.'],
+       ['Why can’t I buy some products yet?','Those apps are still in development. Their buy buttons turn on once they are published on Gumroad.']],
+  fBio:'Independent desktop software by Hamza Mansour.',
+  fPrivT:'Privacy',fPriv:'The apps process your files locally and do not upload them. This website collects no payment details.',
+  fPayT:'Payments and refunds',fPay:'All payments, licenses and refunds are handled by Gumroad on hmzbytes.gumroad.com.'},
+ ar:{lang:'English',store:'متجر Gumroad',nav:['المنتجات','الفيديوهات','عن HMZ-Bytes','الأسئلة'],
+  heroT:'برامج مكتبية توفر وقتك وتحفظ ملفاتك على جهازك.',
+  heroS:'أدوات بسيطة تعمل بدون إنترنت ولا ترسل ملفاتك لأي جهة، وتدعم العربية والإنجليزية.',
+  heroA:'استعرض البرامج',heroB:'افتح متجر Gumroad',
+  prodT:'البرامج',prodS:'متاح الآن وقادم قريباً. الشراء يتم عبر Gumroad.',
+  vidT:'الفيديوهات',vidNone:'فيديوهات الشرح ستظهر هنا قريباً.',
+  details:'التفاصيل',buy:'اشترِ عبر Gumroad',soon:'قريباً',live:'متاح',
+  featT:'المميزات',noFeat:'ستضاف التفاصيل الكاملة عند الإطلاق.',shotT:'لقطات الشاشة',vidOne:'فيديو',
+  aboutT:'عن HMZ-Bytes',
+  aboutP:'مرحباً، أنا حمزة. أصمم تطبيقات ومنتجات رقمية توفر وقتك وتحافظ على أمان بياناتك. أدواتي مبنية على فكرة واحدة: أن تكون سهلة الاستخدام، وتعمل بدون إنترنت، ولا ترسل ملفاتك إلى أي مكان.',
+  pillars:[['معالجة محلية','الملفات تُعالج على جهازك وليس على خادم.'],['عربي وإنجليزي','واجهات من اليمين لليسار ومن اليسار لليمين داخل البرامج.'],['دعم مباشر','عندك سؤال أو فكرة؟ راسلني عبر Gumroad.']],
+  faqT:'الأسئلة الشائعة',
+  faq:[['كيف أشتري؟','اضغط «اشترِ عبر Gumroad» على أي برنامج متاح. تدفع على Gumroad وتستلم رابط التحميل ومفتاح الترخيص هناك.'],
+       ['هل تعمل البرامج بدون إنترنت؟','نعم. معالجة الملفات تتم على جهازك. الإنترنت مطلوب فقط للتحقق من الترخيص وتفعيله.'],
+       ['هل البرامج بالعربي؟','نعم. البرامج تتبدل بين العربية والإنجليزية مع وضع فاتح وداكن.'],
+       ['لماذا لا أستطيع شراء بعض البرامج؟','هذه البرامج ما زالت قيد التطوير. يعمل زر الشراء فور نشرها على Gumroad.']],
+  fBio:'برمجيات مكتبية مستقلة من تطوير حمزة منصور.',
+  fPrivT:'الخصوصية',fPriv:'البرامج تعالج ملفاتك محلياً ولا ترفعها. هذا الموقع لا يجمع أي بيانات دفع.',
+  fPayT:'الدفع والاسترداد',fPay:'كل المدفوعات والتراخيص والاسترداد تتم عبر Gumroad على hmzbytes.gumroad.com.'}
+};
+
+let L = 'en';
+try { L = localStorage.getItem('lang') || ((navigator.language||'').startsWith('ar') ? 'ar' : 'en'); } catch(e){}
+const $ = id => document.getElementById(id);
+const T = k => UI[L][k];
+
+function badge(p){
+  return p.status==='live'
+   ? `<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">${T('live')}</span>`
+   : `<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-800">${T('soon')}</span>`;
+}
+function buyBtn(p, cls){
+  return p.status==='live' && p.url
+   ? `<a href="${p.url}" target="_blank" rel="noopener" class="${cls} bg-sky hover:bg-sky/90 text-white text-center font-bold">${T('buy')}${p.price?` <span class="ltr">(${p.price})</span>`:''}</a>`
+   : `<span class="${cls} bg-slate-100 text-slate-400 text-center font-semibold cursor-not-allowed">${T('soon')}</span>`;
+}
+
+function render(){
+  document.documentElement.lang = L;
+  document.documentElement.dir = L==='ar' ? 'rtl' : 'ltr';
+  $('lang').textContent = T('lang'); $('storeBtn').textContent = T('store');
+  $('nav').innerHTML = ['products','videos','about','faq'].map((h,i)=>`<a href="#${h}" class="hover:text-white">${T('nav')[i]}</a>`).join('');
+  ['heroT','heroS','heroA','heroB','prodT','prodS','vidT','aboutT','aboutP','faqT','fBio','fPrivT','fPriv','fPayT','fPay'].forEach(k=>$(k).textContent=T(k));
+
+  $('grid').innerHTML = PRODUCTS.map(p=>`
+    <article class="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col">
+      <div class="flex items-center justify-between mb-3">${badge(p)}<span class="text-sm font-bold ltr">${p.price||''}</span></div>
+      ${p.shots[0]?`<img src="${p.shots[0]}" alt="${p.n[L]}" loading="lazy" class="rounded-xl border border-slate-200 mb-3 w-full h-40 object-cover" onerror="this.remove()">`:''}
+      <h3 class="text-lg font-bold">${p.n[L]}</h3>
+      <p class="text-sm text-slate-600 mt-1 mb-5 flex-1">${p.t[L]}</p>
+      <div class="flex gap-2">
+        <button data-p="${p.id}" class="flex-1 px-3 py-2.5 rounded-xl bg-navy text-white text-sm font-semibold">${T('details')}</button>
+        ${buyBtn(p,'flex-1 px-3 py-2.5 rounded-xl text-sm')}
+      </div>
+    </article>`).join('');
+
+  const withVid = PRODUCTS.filter(p=>p.yt);
+  $('vids').innerHTML = withVid.length ? withVid.map(p=>`
+    <div><iframe class="w-full aspect-video rounded-xl border border-slate-200" src="https://www.youtube.com/embed/${p.yt}" title="${p.n[L]}" loading="lazy" allowfullscreen></iframe>
+    <p class="mt-2 font-semibold text-sm">${p.n[L]}</p></div>`).join('')
+    : `<p class="text-slate-500 text-sm">${T('vidNone')}</p>`;
+
+  $('pillars').innerHTML = T('pillars').map(([a,b])=>`<div class="bg-white rounded-xl border border-slate-200 p-4"><h3 class="font-bold mb-1">${a}</h3><p class="text-sm text-slate-600">${b}</p></div>`).join('');
+  $('faqList').innerHTML = T('faq').map(([q,a])=>`<details class="bg-slate-50 rounded-xl border border-slate-200 p-4"><summary class="font-semibold cursor-pointer">${q}</summary><p class="text-sm text-slate-600 mt-2">${a}</p></details>`).join('');
+}
+
+function openProduct(id){
+  const p = PRODUCTS.find(x=>x.id===id); if(!p) return;
+  $('mT').textContent = p.n[L];
+  const feats = p.f[L].length ? `<ul class="space-y-2">${p.f[L].map(x=>`<li class="flex gap-2 text-sm"><span class="text-emerald-600 font-bold">✓</span><span>${x}</span></li>`).join('')}</ul>` : `<p class="text-sm text-slate-500">${T('noFeat')}</p>`;
+  $('mB').innerHTML = `
+    <div class="flex items-center gap-3">${badge(p)}<span class="font-bold ltr">${p.price||''}</span></div>
+    <p class="text-slate-700">${p.t[L]}</p>
+    ${p.yt?`<iframe class="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/${p.yt}" title="${T('vidOne')}" allowfullscreen></iframe>`:''}
+    ${p.shots.length?`<div><h4 class="font-bold mb-2">${T('shotT')}</h4><div class="grid gap-3">${p.shots.map(s=>`<img src="${s}" alt="${p.n[L]}" loading="lazy" class="rounded-xl border border-slate-200 w-full" onerror="this.remove()">`).join('')}</div></div>`:''}
+    <div><h4 class="font-bold mb-2">${T('featT')}</h4>${feats}</div>
+    ${buyBtn(p,'block px-5 py-3 rounded-xl')}`;
+  $('modal').classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){ $('modal').classList.add('hidden'); document.body.style.overflow = ''; }
+
+document.addEventListener('click', e=>{
+  const b = e.target.closest('[data-p]'); if(b) openProduct(b.dataset.p);
+  if(e.target.id==='modal') closeModal();
+});
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+$('mX').addEventListener('click', closeModal);
+$('lang').addEventListener('click', ()=>{ L = L==='en'?'ar':'en'; try{localStorage.setItem('lang',L)}catch(e){} render(); });
+render();
+</script>
+</body>
+</html>
