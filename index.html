@@ -3,264 +3,256 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HMZ-Bytes — Desktop software that keeps your files on your PC | برامج مكتبية تحفظ ملفاتك على جهازك</title>
-<meta name="description" content="Offline Windows desktop tools by Hamza Mansour. English & Arabic.">
-<link rel="icon" type="image/png" href="assets/brand/hmz-bytes-logo.png">
+<meta name="theme-color" content="#080f22">
+<title>HMZ-Bytes — Thoughtful software. More control.</title>
+<meta name="description" content="Discover practical Windows software by HMZ-Bytes. Powerful desktop tools for documents, images, screen recording and everyday productivity. Arabic and English.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{navy:'#0A1128',ink:'#111C38',sky:'#0EA5E9'},fontFamily:{sans:['Cairo','system-ui','sans-serif']}}}}</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-html{scroll-behavior:smooth}
-.ltr{direction:ltr;unicode-bidi:embed}
-:focus-visible{outline:2px solid #0EA5E9;outline-offset:2px}
+:root{--bg:#080f22;--bg2:#0d1730;--panel:#101d38;--panel2:#142342;--ink:#f5f8ff;--muted:#a9b6cf;--line:rgba(174,195,232,.15);--blue:#58b9ff;--cyan:#63e4df;--violet:#9b8cff;--green:#6be0b0;--orange:#ffbd79;--white:#fff;--radius:24px;--shadow:0 24px 70px rgba(0,0,0,.28);--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Cairo,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}body[dir=rtl]{font-family:Cairo,Inter,system-ui,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.muted{color:var(--muted)}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#9bdcff;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:1px;background:var(--cyan)}.section{padding:104px 0;position:relative}.section-head{max-width:720px;margin-bottom:42px}.section-head h2{font-size:clamp(30px,4.4vw,52px);line-height:1.12;letter-spacing:-.04em;margin:15px 0}.section-head p{font-size:16px;color:var(--muted);max-width:620px;margin:0}.gradient-text{background:linear-gradient(100deg,#fff 4%,#7ed7ff 48%,#a99cff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.topbar{height:76px;position:sticky;top:0;z-index:50;background:rgba(8,15,34,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.navrow{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:-.04em;font-size:19px;white-space:nowrap}.brandmark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,#6edcff,#6877ff);color:#081226;font-size:12px;font-weight:900;box-shadow:0 8px 28px #3ca8ff40}.navlinks{display:flex;align-items:center;gap:26px;color:#c2cce0;font-size:13px;font-weight:600}.navlinks a{transition:.2s}.navlinks a:hover{color:#fff}.navactions{display:flex;align-items:center;gap:10px}.langbtn,.menuBtn{border:1px solid var(--line);background:#ffffff09;color:#fff;border-radius:12px;padding:9px 13px;font-size:12px;font-weight:800;cursor:pointer}.menuBtn{display:none}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;border-radius:13px;padding:13px 19px;font-size:13px;font-weight:800;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}.btn:hover{transform:translateY(-3px)}.btn-primary{color:#061226;background:linear-gradient(110deg,#73dcff,#7fa4ff);box-shadow:0 12px 35px #4cbbff2c}.btn-ghost{border-color:var(--line);background:#ffffff09;color:#f5f8ff}.btn-small{padding:10px 14px;font-size:12px}.hero{position:relative;overflow:hidden;padding:100px 0 82px;min-height:690px;display:flex;align-items:center;background:radial-gradient(ellipse at 80% 30%,#243c75 0,transparent 38%),radial-gradient(ellipse at 15% 85%,#133c55 0,transparent 34%),linear-gradient(135deg,#080f22 0%,#0b1630 58%,#111a39 100%)}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:52px 52px;mask-image:linear-gradient(to bottom,black,transparent 90%);pointer-events:none}.heroGlow{position:absolute;width:420px;height:420px;border-radius:50%;background:#4aaeff20;filter:blur(70px);right:5%;top:15%}.heroGrid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:44px}.heroCopy{max-width:620px}.hero h1{font-size:clamp(44px,6vw,76px);line-height:1.02;letter-spacing:-.065em;margin:22px 0}.hero p{font-size:17px;line-height:1.85;color:#b8c6df;max-width:560px}.heroBtns{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.heroNote{display:flex;gap:17px;flex-wrap:wrap;margin-top:32px;color:#b9c7df;font-size:11px;font-weight:700}.heroNote span{display:flex;align-items:center;gap:7px}.dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}.heroVisual{min-height:450px;position:relative;display:grid;place-items:center}.orbit{position:absolute;width:420px;height:420px;border:1px solid #8acfff22;border-radius:50%;box-shadow:0 0 90px #5caaff0c,inset 0 0 90px #5caaff08}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #8acfff18;border-radius:50%;inset:42px}.orbit:after{inset:90px}.showcaseWindow{position:relative;width:min(100%,440px);border:1px solid #a8caff35;background:linear-gradient(145deg,#1a2b4cdd,#0c1730ee);border-radius:22px;box-shadow:0 35px 90px #0008;overflow:hidden;transform:rotate(-3deg);z-index:2}.windowTop{height:42px;display:flex;align-items:center;justify-content:space-between;padding:0 15px;border-bottom:1px solid #ffffff12;color:#b9c7df;font-size:10px}.windowDots{display:flex;gap:5px}.windowDots i{width:6px;height:6px;border-radius:50%;background:#7890b8}.windowBody{padding:17px}.fakeAppHead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.fakeAppHead b{font-size:14px}.fakeTag{font-size:9px;padding:5px 8px;border-radius:8px;background:#4e9fff25;color:#9dd8ff}.fakeTiles{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.fakeTile{min-height:102px;border-radius:13px;padding:13px;background:linear-gradient(145deg,#243b62,#172846);border:1px solid #ffffff10}.fakeIcon{font-size:20px}.fakeTile b{display:block;font-size:11px;margin-top:8px}.fakeTile small{font-size:9px;color:#9fb2d2}.fakeBottom{height:48px;margin-top:12px;border-radius:12px;background:#ffffff08;display:flex;align-items:center;justify-content:space-between;padding:0 13px;color:#b9c8e0;font-size:9px}.floatingCard{position:absolute;z-index:3;border:1px solid #b7d8ff35;background:#122341ed;backdrop-filter:blur(12px);box-shadow:var(--shadow);border-radius:15px;padding:13px 16px}.floatOne{top:50px;right:-5px;transform:rotate(5deg)}.floatTwo{bottom:42px;left:-12px;transform:rotate(-5deg)}.floatingCard strong{display:block;font-size:12px}.floatingCard small{color:#a9b9d3;font-size:10px}.floatIcon{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:9px;background:#65d9cf20;margin-right:7px}.trustStrip{border-block:1px solid var(--line);background:#0b142a}.trustInner{display:grid;grid-template-columns:repeat(4,1fr);padding:23px 0;gap:18px}.trustItem{display:flex;align-items:center;gap:11px;color:#c4d0e5;font-size:12px;font-weight:700}.trustIcon{width:34px;height:34px;border:1px solid var(--line);border-radius:11px;display:grid;place-items:center;color:var(--cyan);font-size:15px}.productSection{background:linear-gradient(180deg,#0a1328,#0b1429)}.productToolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);border-radius:99px;background:#ffffff06;color:#b9c8e0;padding:9px 14px;font-size:11px;font-weight:800;cursor:pointer}.filter.active,.filter:hover{background:#78cfff18;border-color:#68caff66;color:#fff}.productGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.productCard{position:relative;border:1px solid var(--line);border-radius:21px;background:linear-gradient(145deg,#142342,#0e1a33);overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s;display:flex;flex-direction:column;min-width:0}.productCard:hover{transform:translateY(-7px);border-color:#76caff65;box-shadow:0 22px 55px #0004}.productVisual{height:205px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,#2c5482,#142544 60%,#101b34)}.productVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#101b34 0%,transparent 48%)}.productVisual img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:1;transition:transform .5s}.productCard:hover .productVisual img{transform:scale(1.045)}.visualFallback{position:absolute;inset:0;display:grid;place-items:center;font-size:68px;opacity:.9}.productVisual.has-image .visualFallback{display:none}.productVisual img:not([src=""]){ } .productBadge{position:absolute;z-index:3;top:14px;left:14px;padding:6px 10px;border-radius:99px;background:#091329d9;border:1px solid #ffffff20;color:#b8e9ff;font-size:9px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.productBody{padding:20px;display:flex;flex-direction:column;flex:1}.productMeta{display:flex;justify-content:space-between;align-items:center;gap:10px;color:#9fb0cd;font-size:10px;font-weight:800}.productBody h3{font-size:20px;letter-spacing:-.035em;margin:10px 0 5px}.productBody p{font-size:12px;line-height:1.75;color:#aebbd2;margin:0 0 18px;min-height:44px}.miniFeatures{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}.miniFeatures span{font-size:9px;color:#c5d5ec;border:1px solid #ffffff13;background:#ffffff06;padding:5px 8px;border-radius:7px}.cardActions{display:flex;gap:8px;margin-top:auto}.cardActions .btn{flex:1;padding:11px 10px;font-size:11px}.cardActions .btn-ghost{border-color:#ffffff1c}.price{color:#b8e6ff}.status-live{color:#75e4b8}.status-soon{color:#ffcf91}.featuredBand{margin-top:26px;border:1px solid #72caff35;border-radius:20px;padding:22px 25px;background:linear-gradient(100deg,#16375b,#182747 55%,#24244b);display:flex;align-items:center;justify-content:space-between;gap:20px}.featuredBand h3{margin:0 0 4px;font-size:17px}.featuredBand p{margin:0;color:#b9c8df;font-size:12px}.featureSection{background:#0c1730}.featureGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.featurePanel{border:1px solid var(--line);border-radius:25px;padding:30px;background:linear-gradient(145deg,#142442,#0f1c35);min-height:300px;position:relative;overflow:hidden}.featurePanel:after{content:"";position:absolute;width:210px;height:210px;border-radius:50%;background:#58b9ff12;filter:blur(35px);right:-65px;bottom:-80px}.featurePanel h3{font-size:24px;letter-spacing:-.04em;margin:14px 0 8px;position:relative;z-index:1}.featurePanel p{color:#aebbd2;font-size:13px;max-width:460px;position:relative;z-index:1}.featureList{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:22px;position:relative;z-index:1}.featureList span{font-size:11px;color:#d1def1;display:flex;gap:8px;align-items:center}.check{color:var(--cyan);font-weight:900}.featureSymbol{width:48px;height:48px;border-radius:15px;background:#5ccaff18;border:1px solid #69d0ff30;display:grid;place-items:center;font-size:23px}.journey{background:linear-gradient(180deg,#0b1429,#0d1830)}.journeyGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.journeyCard{padding:25px;border:1px solid var(--line);border-radius:20px;background:#ffffff05;min-height:210px}.journeyNum{font-size:11px;color:var(--cyan);font-weight:900;letter-spacing:.12em}.journeyCard h3{font-size:18px;margin:17px 0 8px}.journeyCard p{font-size:12px;color:#aebbd2;margin:0;line-height:1.8}.privacy{background:radial-gradient(ellipse at 80% 50%,#183b52 0,transparent 42%),#091326;overflow:hidden}.privacyGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.privacy h2{font-size:clamp(34px,4.5vw,55px);line-height:1.08;letter-spacing:-.05em;margin:15px 0}.privacy p{color:#b6c5dc;font-size:14px;line-height:1.9}.privacyPoints{display:grid;gap:12px;margin-top:25px}.privacyPoint{display:flex;gap:12px;align-items:flex-start;font-size:12px;color:#d5e0f1}.privacyPoint i{font-style:normal;display:grid;place-items:center;flex:0 0 28px;height:28px;border-radius:9px;background:#6be0b01b;color:var(--green)}.privacyVisual{min-height:360px;display:grid;place-items:center;position:relative}.shield{width:260px;height:290px;clip-path:polygon(50% 0,92% 17%,87% 69%,50% 100%,13% 69%,8% 17%);background:linear-gradient(145deg,#69dfff,#607bff 58%,#9b8cff);display:grid;place-items:center;filter:drop-shadow(0 25px 55px #45aaff35)}.shieldInner{width:245px;height:275px;clip-path:polygon(50% 0,92% 17%,87% 69%,50% 100%,13% 69%,8% 17%);background:linear-gradient(145deg,#132c4c,#0d1b35);display:grid;place-items:center;font-size:72px}.privacyOrbit{position:absolute;width:390px;height:390px;border:1px solid #83dfff25;border-radius:50%}.privacyOrbit:before,.privacyOrbit:after{content:"";position:absolute;inset:28px;border:1px dashed #83dfff22;border-radius:50%}.privacyOrbit:after{inset:75px}.contentSection{background:#0c1730}.contentGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.videoFeature{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#12213e;min-height:280px;display:flex;flex-direction:column}.videoPlaceholder{flex:1;min-height:210px;display:grid;place-items:center;background:radial-gradient(circle at 50% 45%,#335c8d,#142544 65%,#101a32);position:relative}.playButton{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#ffffffed;color:#0b1830;font-size:22px;box-shadow:0 10px 35px #0005}.videoCaption{padding:18px}.videoCaption b{font-size:14px}.videoCaption p{font-size:11px;color:#aab9d1;margin:5px 0 0}.contentSide{display:grid;gap:15px}.contentTile{border:1px solid var(--line);border-radius:20px;padding:21px;background:linear-gradient(145deg,#172849,#101c35)}.contentTile small{color:var(--cyan);font-size:10px;font-weight:900;letter-spacing:.12em}.contentTile h3{font-size:17px;margin:9px 0 5px}.contentTile p{font-size:11px;color:#aebbd2;margin:0}.about{background:#0a1429}.aboutGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}.aboutBrand{font-size:clamp(36px,5vw,60px);font-weight:900;letter-spacing:-.06em;line-height:1}.aboutText p{color:#b7c5dc;font-size:14px;line-height:1.95;margin:0 0 18px}.values{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.value{border-top:1px solid var(--line);padding-top:14px}.value b{display:block;font-size:12px;margin-bottom:4px}.value span{font-size:10px;color:#9eafca}.faq{background:#0d1830}.faqGrid{display:grid;grid-template-columns:.7fr 1.3fr;gap:55px}.faqList{display:grid;gap:10px}.faqItem{border:1px solid var(--line);border-radius:14px;background:#ffffff05;overflow:hidden}.faqItem summary{padding:17px 19px;cursor:pointer;font-size:12px;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:20px}.faqItem summary::-webkit-details-marker{display:none}.faqItem summary:after{content:"+";color:var(--cyan);font-size:18px;line-height:1}.faqItem[open] summary:after{content:"−"}.faqAnswer{padding:0 19px 18px;color:#aebbd2;font-size:12px;line-height:1.8}.cta{padding:70px 0;background:radial-gradient(ellipse at 50% 100%,#28517b 0,transparent 65%),#0a1429}.ctaBox{border:1px solid #81ceff40;border-radius:28px;padding:48px 35px;text-align:center;background:linear-gradient(120deg,#15365a,#17274a 60%,#24244b);box-shadow:var(--shadow)}.ctaBox h2{font-size:clamp(30px,4.5vw,48px);line-height:1.1;letter-spacing:-.05em;margin:13px auto;max-width:700px}.ctaBox p{color:#c0cee2;font-size:13px;max-width:570px;margin:0 auto 25px}.footer{background:#060c19;border-top:1px solid var(--line);padding:48px 0 22px}.footerGrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}.footer h4{font-size:12px;margin:0 0 13px;color:#fff}.footer p,.footer a{font-size:11px;color:#9eacc4;line-height:2}.footerLinks{display:grid;gap:5px}.footerBottom{border-top:1px solid var(--line);margin-top:35px;padding-top:17px;display:flex;justify-content:space-between;gap:12px;color:#71819d;font-size:10px}.modal{position:fixed;inset:0;z-index:100;background:#020713d9;backdrop-filter:blur(10px);display:none;overflow:auto;padding:30px 16px}.modal.open{display:block}.modalBox{max-width:900px;margin:20px auto;background:#0f1c35;border:1px solid #9dcfff35;border-radius:24px;overflow:hidden;box-shadow:0 30px 100px #0009}.modalHead{padding:19px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);position:sticky;top:0;background:#101e39ed;backdrop-filter:blur(12px);z-index:2}.modalHead h3{margin:0;font-size:19px}.close{border:1px solid var(--line);background:#ffffff0b;color:#fff;border-radius:10px;width:36px;height:36px;font-size:20px;cursor:pointer}.modalContent{padding:25px}.modalIntro{color:#bdcbe0;font-size:13px;line-height:1.8}.modalShots{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}.modalShots img{width:100%;border-radius:13px;border:1px solid var(--line);background:#172849}.modalFeatures{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0 24px}.modalFeature{font-size:11px;color:#cbd8ea;display:flex;gap:9px;align-items:flex-start}.modalFeature:before{content:"✓";color:var(--green);font-weight:900}.modalFoot{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.rtl{text-align:right}
+@media(max-width:900px){.navlinks{gap:13px}.heroGrid{grid-template-columns:1fr}.hero{padding:75px 0}.heroVisual{min-height:390px}.productGrid{grid-template-columns:repeat(2,1fr)}.privacyGrid{gap:20px}.footerGrid{grid-template-columns:1fr 1fr}.aboutGrid{gap:25px}}
+@media(max-width:680px){.wrap{width:min(100% - 30px,var(--max))}.topbar{height:66px}.navlinks{display:none;position:absolute;top:65px;left:15px;right:15px;padding:16px;background:#101d38;border:1px solid var(--line);border-radius:16px;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:11px}.menuBtn{display:inline-flex}.brand{font-size:16px}.hero{padding:62px 0 55px;min-height:auto}.hero h1{font-size:clamp(42px,12vw,60px)}.hero p{font-size:14px}.heroVisual{min-height:320px;margin-top:15px}.orbit{width:310px;height:310px}.showcaseWindow{width:min(100%,360px)}.floatOne{right:-2px;top:16px}.floatTwo{left:-2px;bottom:20px}.trustInner{grid-template-columns:1fr 1fr;gap:16px}.section{padding:72px 0}.section-head{margin-bottom:28px}.productGrid{grid-template-columns:1fr}.productVisual{height:220px}.featuredBand{align-items:flex-start;flex-direction:column}.featureGrid,.privacyGrid,.contentGrid,.aboutGrid,.faqGrid{grid-template-columns:1fr}.featurePanel{min-height:0;padding:23px}.featureList{grid-template-columns:1fr 1fr}.journeyGrid{grid-template-columns:1fr}.privacyVisual{min-height:300px}.privacyOrbit{width:320px;height:320px}.shield{transform:scale(.82)}.values{grid-template-columns:1fr}.footerGrid{grid-template-columns:1fr 1fr;gap:25px}.footerGrid>div:first-child{grid-column:1/-1}.footerBottom{flex-direction:column}.modalShots,.modalFeatures{grid-template-columns:1fr}.ctaBox{padding:35px 20px}.heroBtns .btn{flex:1}.productToolbar{align-items:flex-start}.filters{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased">
-
-<header class="sticky top-0 z-40 bg-navy/95 backdrop-blur text-white border-b border-slate-800">
-  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-3">
-    <a href="#top" class="flex items-center gap-2.5 font-extrabold text-lg">
-      <img src="assets/brand/hmz-bytes-logo.png" alt="HMZ-Bytes" class="h-10 max-w-[170px] object-contain" onerror="this.style.display='none'">
-      <span>HMZ-Bytes</span>
-    </a>
-    <nav id="nav" class="hidden md:flex gap-5 text-sm text-slate-300"></nav>
-    <div class="flex items-center gap-2">
-      <button id="lang" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold"></button>
-      <a href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" id="storeBtn" class="px-3.5 py-2 rounded-lg bg-sky hover:bg-sky/90 text-xs font-bold"></a>
-    </div>
-  </div>
+<body>
+<header class="topbar">
+ <div class="wrap navrow">
+  <a class="brand" href="#top"><span class="brandmark">HMZ</span><span>HMZ-Bytes</span></a>
+  <nav class="navlinks" id="navlinks">
+   <a href="#products" data-i="navProducts">Products</a><a href="#experience" data-i="navWhy">Why HMZ</a><a href="#privacy" data-i="navPrivacy">Privacy</a><a href="#stories" data-i="navStories">Explore</a><a href="#about" data-i="navAbout">About</a><a href="#faq" data-i="navFaq">FAQ</a>
+  </nav>
+  <div class="navactions"><button class="langbtn" id="langBtn">العربية</button><a class="btn btn-primary btn-small" href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" data-i="store">Explore Store ↗</a><button class="menuBtn" id="menuBtn" aria-label="Open menu">☰</button></div>
+ </div>
 </header>
 
 <main id="top">
-  <section class="bg-navy text-white relative overflow-hidden">
-    <img src="assets/brand/hmz-bytes-hero.webp" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover opacity-30" onerror="this.remove()">
-    <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/55"></div>
-    <div class="max-w-6xl mx-auto px-4 py-16 sm:py-24 relative z-10">
-      <h1 id="heroT" class="text-3xl sm:text-5xl font-extrabold leading-tight max-w-3xl"></h1>
-      <p id="heroS" class="mt-5 text-slate-300 text-base sm:text-lg max-w-2xl"></p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="#products" id="heroA" class="px-6 py-3 rounded-xl bg-sky font-bold text-sm"></a>
-        <a href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" id="heroB" class="px-6 py-3 rounded-xl bg-slate-800 border border-slate-700 font-bold text-sm"></a>
-      </div>
+<section class="hero">
+ <div class="heroGlow"></div>
+ <div class="wrap heroGrid">
+  <div class="heroCopy reveal">
+   <span class="eyebrow" data-i="heroEyebrow">INDEPENDENT DESKTOP SOFTWARE</span>
+   <h1 data-i="heroTitle">Your work.<br><span class="gradient-text">Your tools.</span><br>Your control.</h1>
+   <p data-i="heroText">Meet a smarter collection of Windows apps built to make everyday work simpler — with powerful features, thoughtful design, and your files staying on your device.</p>
+   <div class="heroBtns"><a class="btn btn-primary" href="#products" data-i="heroCta">Explore the apps <span>↘</span></a><a class="btn btn-ghost" href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" data-i="heroStore">Visit the Gumroad store ↗</a></div>
+   <div class="heroNote"><span><i class="dot"></i><span data-i="heroNote1">Windows desktop apps</span></span><span><i class="dot"></i><span data-i="heroNote2">Arabic + English</span></span><span><i class="dot"></i><span data-i="heroNote3">Local-first processing</span></span></div>
+  </div>
+  <div class="heroVisual reveal">
+   <div class="orbit"></div>
+   <div class="showcaseWindow">
+    <div class="windowTop"><span>HMZ-Bytes / Your workspace</span><span class="windowDots"><i></i><i></i><i></i></span></div>
+    <div class="windowBody">
+     <div class="fakeAppHead"><b data-i="mockTitle">A toolkit for every task</b><span class="fakeTag">DESKTOP SUITE</span></div>
+     <div class="fakeTiles">
+      <div class="fakeTile"><span class="fakeIcon">▤</span><b>PDF Toolkit Pro</b><small data-i="mockPdf">Documents, under control</small></div>
+      <div class="fakeTile"><span class="fakeIcon">▧</span><b>Image Toolkit Pro</b><small data-i="mockImg">Images, beautifully handled</small></div>
+      <div class="fakeTile"><span class="fakeIcon">◉</span><b>ScreenCast Pro</b><small data-i="mockCast">Record. Explain. Present.</small></div>
+      <div class="fakeTile"><span class="fakeIcon">⌗</span><b>Smart File Hub</b><small data-i="mockHub">Bring order to your files</small></div>
+     </div>
+     <div class="fakeBottom"><span data-i="mockBottom">Designed for focus. Built for control.</span><span>● ● ●</span></div>
     </div>
-  </section>
+   </div>
+   <div class="floatingCard floatOne"><strong><span class="floatIcon">⌁</span><span data-i="floatOne">Made for real workflows</span></strong><small data-i="floatOneSub">Less switching. More doing.</small></div>
+   <div class="floatingCard floatTwo"><strong><span class="floatIcon">⛨</span><span data-i="floatTwo">Your files stay yours</span></strong><small data-i="floatTwoSub">Local processing in supported apps.</small></div>
+  </div>
+ </div>
+</section>
 
-  <section id="products" class="max-w-6xl mx-auto px-4 py-14">
-    <h2 id="prodT" class="text-2xl font-extrabold"></h2>
-    <p id="prodS" class="text-slate-600 mt-1 mb-8 text-sm"></p>
-    <div id="grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
-  </section>
+<div class="trustStrip"><div class="wrap trustInner">
+ <div class="trustItem"><span class="trustIcon">⌘</span><span data-i="trust1">Purpose-built Windows tools</span></div>
+ <div class="trustItem"><span class="trustIcon">◎</span><span data-i="trust2">English & Arabic interfaces</span></div>
+ <div class="trustItem"><span class="trustIcon">◈</span><span data-i="trust3">Thoughtful, practical features</span></div>
+ <div class="trustItem"><span class="trustIcon">⌂</span><span data-i="trust4">Your files processed locally</span></div>
+</div></div>
 
-  <section id="videos" class="bg-white border-y border-slate-200">
-    <div class="max-w-6xl mx-auto px-4 py-14">
-      <h2 id="vidT" class="text-2xl font-extrabold mb-6"></h2>
-      <div id="vids" class="grid gap-6 md:grid-cols-2"></div>
-    </div>
-  </section>
+<section class="section productSection" id="products">
+ <div class="wrap">
+  <div class="section-head reveal"><span class="eyebrow" data-i="productsEyebrow">THE SOFTWARE COLLECTION</span><h2 data-i="productsTitle">Meet your next <span class="gradient-text">favorite tool.</span></h2><p data-i="productsText">From documents and images to screen recording and file organization — discover focused desktop apps designed to solve real everyday problems.</p></div>
+  <div class="productToolbar reveal"><div class="filters" id="filters">
+   <button class="filter active" data-filter="all" data-i="filterAll">All apps</button><button class="filter" data-filter="available" data-i="filterLive">Available now</button><button class="filter" data-filter="productivity" data-i="filterProd">Productivity</button><button class="filter" data-filter="creative" data-i="filterCreative">Creative tools</button><button class="filter" data-filter="upcoming" data-i="filterUpcoming">Coming soon</button>
+  </div><span class="muted" style="font-size:11px" data-i="productHint">Select an app to explore what it can do.</span></div>
+  <div class="productGrid" id="productGrid"></div>
+  <div class="featuredBand reveal"><div><h3 data-i="bandTitle">Not sure where to start?</h3><p data-i="bandText">Browse the complete HMZ-Bytes collection and find the right tool for your workflow.</p></div><a class="btn btn-primary btn-small" href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" data-i="bandBtn">Browse all products ↗</a></div>
+ </div>
+</section>
 
-  <section id="about" class="max-w-4xl mx-auto px-4 py-14">
-    <h2 id="aboutT" class="text-2xl font-extrabold mb-4"></h2>
-    <p id="aboutP" class="text-slate-700 leading-relaxed"></p>
-    <div id="pillars" class="mt-8 grid gap-4 sm:grid-cols-3"></div>
-  </section>
+<section class="section featureSection" id="experience">
+ <div class="wrap">
+  <div class="section-head reveal"><span class="eyebrow" data-i="whyEyebrow">THE HMZ-BYTES APPROACH</span><h2 data-i="whyTitle">Software should work <span class="gradient-text">the way you do.</span></h2><p data-i="whyText">A useful app is more than a long feature list. It should feel clear from the first click, stay out of your way, and help you finish the task.</p></div>
+  <div class="featureGrid">
+   <article class="featurePanel reveal"><div class="featureSymbol">✦</div><h3 data-i="panel1Title">Power without the clutter.</h3><p data-i="panel1Text">Focused workspaces bring related tools together, so you spend less time jumping between apps and more time getting things done.</p><div class="featureList"><span><i class="check">✓</i><span data-i="p1a">Organized interfaces</span></span><span><i class="check">✓</i><span data-i="p1b">Practical workflows</span></span><span><i class="check">✓</i><span data-i="p1c">Useful shortcuts</span></span><span><i class="check">✓</i><span data-i="p1d">Built-in guidance</span></span></div></article>
+   <article class="featurePanel reveal"><div class="featureSymbol">⌘</div><h3 data-i="panel2Title">Made to feel familiar.</h3><p data-i="panel2Text">Switch between Arabic and English, choose a comfortable appearance, and make the workspace feel right for you.</p><div class="featureList"><span><i class="check">✓</i><span data-i="p2a">Arabic RTL support</span></span><span><i class="check">✓</i><span data-i="p2b">English LTR support</span></span><span><i class="check">✓</i><span data-i="p2c">Light & dark themes</span></span><span><i class="check">✓</i><span data-i="p2d">Customizable settings</span></span></div></article>
+  </div>
+ </div>
+</section>
 
-  <section id="faq" class="bg-white border-t border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 py-14">
-      <h2 id="faqT" class="text-2xl font-extrabold mb-6"></h2>
-      <div id="faqList" class="space-y-3"></div>
-    </div>
-  </section>
+<section class="section journey">
+ <div class="wrap">
+  <div class="section-head reveal"><span class="eyebrow" data-i="journeyEyebrow">A BETTER WAY TO GET IT DONE</span><h2 data-i="journeyTitle">One task. A more <span class="gradient-text">thoughtful workflow.</span></h2><p data-i="journeyText">The right tool can turn a scattered process into a clear sequence. That's the thinking behind the HMZ-Bytes collection.</p></div>
+  <div class="journeyGrid">
+   <article class="journeyCard reveal"><span class="journeyNum">01 / FIND</span><h3 data-i="j1Title">Start with the task.</h3><p data-i="j1Text">Choose a focused app for the job — managing documents, preparing images, recording a tutorial, or organizing files.</p></article>
+   <article class="journeyCard reveal"><span class="journeyNum">02 / WORK</span><h3 data-i="j2Title">Stay in one workspace.</h3><p data-i="j2Text">Use the tools you need in a clear desktop environment, with helpful controls and practical options close at hand.</p></article>
+   <article class="journeyCard reveal"><span class="journeyNum">03 / FINISH</span><h3 data-i="j3Title">Keep control of the result.</h3><p data-i="j3Text">Save your work locally and move on with your day. No unnecessary detours, no needless complexity.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="section privacy" id="privacy">
+ <div class="wrap privacyGrid">
+  <div class="reveal"><span class="eyebrow" data-i="privacyEyebrow">LOCAL-FIRST BY DESIGN</span><h2 data-i="privacyTitle">Your files are <span class="gradient-text">your business.</span></h2><p data-i="privacyText">For apps that process your documents, images, and recordings locally, your work stays on your computer instead of being sent to an online editing service.</p>
+   <div class="privacyPoints">
+    <div class="privacyPoint"><i>✓</i><span data-i="privacy1">No uploading your working files to third-party processing websites in supported apps.</span></div>
+    <div class="privacyPoint"><i>✓</i><span data-i="privacy2">Work with your files directly on your Windows PC.</span></div>
+    <div class="privacyPoint"><i>✓</i><span data-i="privacy3">Internet access may still be used for license activation, verification, updates, or app catalog features.</span></div>
+   </div>
+  </div>
+  <div class="privacyVisual reveal"><div class="privacyOrbit"></div><div class="shield"><div class="shieldInner">⛨</div></div></div>
+ </div>
+</section>
+
+<section class="section contentSection" id="stories">
+ <div class="wrap">
+  <div class="section-head reveal"><span class="eyebrow" data-i="storiesEyebrow">GO BEYOND THE PRODUCT PAGE</span><h2 data-i="storiesTitle">Explore. Learn. <span class="gradient-text">Make more.</span></h2><p data-i="storiesText">A growing space for product walkthroughs, practical tips, and ideas that help you get more from your desktop tools.</p></div>
+  <div class="contentGrid">
+   <article class="videoFeature reveal"><div class="videoPlaceholder"><a class="playButton" href="https://www.youtube.com/watch?v=mvLQOFRsS_s" target="_blank" rel="noopener" aria-label="Watch HMZ-Bytes video">▶</a></div><div class="videoCaption"><b data-i="videoTitle">A closer look at HMZ-Bytes</b><p data-i="videoText">Watch the brand introduction and discover the thinking behind the tools.</p></div></article>
+   <div class="contentSide">
+    <article class="contentTile reveal"><small data-i="tile1Tag">HOW-TO GUIDES</small><h3 data-i="tile1Title">Make every feature count.</h3><p data-i="tile1Text">Practical walkthroughs for everyday tasks, from document workflows to image preparation.</p></article>
+    <article class="contentTile reveal"><small data-i="tile2Tag">PRODUCT UPDATES</small><h3 data-i="tile2Title">See what's new.</h3><p data-i="tile2Text">Follow new releases, improvements, and additions to the HMZ-Bytes software collection.</p></article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section about" id="about">
+ <div class="wrap aboutGrid">
+  <div class="reveal"><span class="eyebrow" data-i="aboutEyebrow">A SMALL STUDIO. A CLEAR PURPOSE.</span><div class="aboutBrand">HMZ-<br><span class="gradient-text">Bytes.</span></div></div>
+  <div class="aboutText reveal"><p data-i="aboutText1">HMZ-Bytes is an independent software project focused on creating practical Windows applications that make everyday digital work easier.</p><p data-i="aboutText2">The idea is simple: bring useful capabilities into thoughtfully designed tools, respect the user's workflow, and keep control where it belongs — with the person using the software.</p>
+   <div class="values"><div class="value"><b data-i="value1Title">Useful by design</b><span data-i="value1Text">Features built around real tasks.</span></div><div class="value"><b data-i="value2Title">Clear experience</b><span data-i="value2Text">Interfaces that feel approachable.</span></div><div class="value"><b data-i="value3Title">User control</b><span data-i="value3Text">Your settings, files, and workflow.</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section faq" id="faq">
+ <div class="wrap faqGrid">
+  <div class="section-head reveal"><span class="eyebrow" data-i="faqEyebrow">GOOD TO KNOW</span><h2 data-i="faqTitle">A few things <span class="gradient-text">you may wonder.</span></h2><p data-i="faqText">Quick answers before you choose your next desktop tool.</p></div>
+  <div class="faqList reveal" id="faqList"></div>
+ </div>
+</section>
+
+<section class="cta"><div class="wrap"><div class="ctaBox reveal"><span class="eyebrow" data-i="ctaEyebrow">YOUR NEXT TOOL IS WAITING</span><h2 data-i="ctaTitle">Make room for a <span class="gradient-text">better workflow.</span></h2><p data-i="ctaText">Explore the HMZ-Bytes collection and find a desktop app that makes your next task simpler.</p><a class="btn btn-primary" href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" data-i="ctaBtn">Discover HMZ-Bytes on Gumroad ↗</a></div></div></section>
 </main>
 
-<footer class="bg-navy text-slate-400 text-sm">
-  <div class="max-w-6xl mx-auto px-4 py-10 grid gap-6 md:grid-cols-3">
-    <div><div class="mb-2"><img src="assets/brand/hmz-bytes-logo-white.png" alt="HMZ-Bytes" class="h-9 max-w-[160px] object-contain" onerror="this.replaceWith(document.createTextNode('HMZ-Bytes'))"></div><p id="fBio" class="text-xs leading-relaxed"></p></div>
-    <div><div id="fPrivT" class="text-white font-bold mb-2"></div><p id="fPriv" class="text-xs leading-relaxed"></p></div>
-    <div><div id="fPayT" class="text-white font-bold mb-2"></div><p id="fPay" class="text-xs leading-relaxed"></p></div>
-  </div>
-  <div class="border-t border-slate-800 text-center text-xs py-4">© 2026 HMZ-Bytes (Hamza Mansour)</div>
-</footer>
+<footer class="footer"><div class="wrap">
+ <div class="footerGrid">
+  <div><a class="brand" href="#top"><span class="brandmark">HMZ</span><span>HMZ-Bytes</span></a><p data-i="footerBio">Independent Windows software, thoughtfully made by Hamza Mansour.</p></div>
+  <div><h4 data-i="footerExplore">Explore</h4><div class="footerLinks"><a href="#products" data-i="navProducts">Products</a><a href="#stories" data-i="navStories">Explore</a><a href="#about" data-i="navAbout">About</a></div></div>
+  <div><h4 data-i="footerHelp">Help & information</h4><div class="footerLinks"><a href="#faq" data-i="navFaq">FAQ</a><a href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" data-i="footerSupport">Store & support</a><a href="#privacy" data-i="navPrivacy">Privacy approach</a></div></div>
+  <div><h4 data-i="footerStore">Official store</h4><div class="footerLinks"><a href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener">hmzbytes.gumroad.com ↗</a><span data-i="footerPayment">Purchases and license delivery are handled through Gumroad.</span></div></div>
+ </div>
+ <div class="footerBottom"><span>© 2026 HMZ-Bytes. <span data-i="rights">All rights reserved.</span></span><span data-i="footerMade">Built with care. Made for useful work.</span></div>
+</div></footer>
 
-<div id="modal" class="hidden fixed inset-0 z-50 bg-black/70 p-4 overflow-y-auto" role="dialog" aria-modal="true">
-  <div class="bg-white rounded-2xl max-w-3xl mx-auto my-6 overflow-hidden">
-    <div class="bg-navy text-white px-5 py-4 flex justify-between items-center">
-      <h3 id="mT" class="font-bold text-lg"></h3>
-      <button id="mX" class="text-2xl leading-none px-2" aria-label="Close">×</button>
-    </div>
-    <div id="mB" class="p-5 space-y-5"></div>
-  </div>
-</div>
+<div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modalBox"><div class="modalHead"><h3 id="modalTitle"></h3><button class="close" id="modalClose" aria-label="Close">×</button></div><div class="modalContent" id="modalContent"></div></div></div>
 
 <script>
-/* =====================================================================
-   EDIT HERE — product data.
-   status: 'live' (buy button on)  |  'soon' (buy button off)
-   url:    exact Gumroad product link (only needed when status is 'live')
-   icon:   app icon under assets/icons/
-   shots:  screenshots under assets/screenshots/<app-folder>/
-   video:  brand MP4 is served from assets/videos/hmzbytes-intro.mp4
-   ===================================================================== */
-const STORE = 'https://hmzbytes.gumroad.com/';
-const BRAND_VIDEO = 'assets/videos/hmzbytes-intro.mp4';
-const BRAND_VIDEO_POSTER = 'assets/videos/hmzbytes-intro-poster.webp';
-const PRODUCTS = [
- { id:'pdf', status:'live', icon:'assets/icons/pdf-toolkit-pro.png', price:'$4.99+', url:'https://hmzbytes.gumroad.com/l/PDF-Toolkit-pro'
-   shots:['assets/screenshots/pdf-toolkit-pro/01-main.webp','assets/screenshots/pdf-toolkit-pro/02-workspace.webp','assets/screenshots/pdf-toolkit-pro/03-feature-1.webp'],
-   n:{en:'PDF Toolkit Pro',ar:'PDF Toolkit Pro'},
-   t:{en:'Edit your PDFs fully offline on your own computer.',ar:'عدّل ملفات PDF بالكامل على جهازك وبدون إنترنت.'},
-   f:{en:['15 tools: split, rotate, delete, reorder, merge with drag and drop','Compress: light, balanced, maximum, or a target size in MB','Images to PDF and PDF to images','Page numbers and watermark','True text redaction that removes sensitive text','AES-256 password protection, add or remove','Edit or clear metadata, extract text to TXT','OCR to searchable PDF or TXT, and batch up to 20 files (paid, OCR needs Tesseract)','English / Arabic switch, themes, light / dark / system mode, built-in guide in two languages','Free trial: 3 successful operations. Preview and undo are free'],
-      ar:['15 أداة: تقسيم وتدوير وحذف وترتيب ودمج بالسحب والإفلات','ضغط: خفيف أو متوازن أو أقصى أو حجم مستهدف بالميغابايت','تحويل الصور إلى PDF وPDF إلى صور','ترقيم الصفحات وعلامة مائية','تعتيم نص حقيقي يحذف النص الحساس فعلياً','حماية بكلمة مرور AES-256 أو إزالتها','تعديل بيانات الملف أو مسحها واستخراج النص إلى TXT','OCR لملف PDF قابل للبحث أو TXT، ومعالجة دفعية حتى 20 ملفاً (مدفوع، وOCR يحتاج Tesseract)','تبديل عربي / إنجليزي وثيمات ووضع فاتح وداكن وتلقائي ودليل استخدام بلغتين','تجربة مجانية: 3 عمليات ناجحة. المعاينة والتراجع مجانيان']}},
- { id:'omni', status:'live', icon:'assets/icons/omni-calc-studio.png', price:'$0.99+', url:'https://hmzbytes.gumroad.com/l/OmniCalc-Studio'
-   shots:['assets/screenshots/omni-calc-studio/01-main.webp','assets/screenshots/omni-calc-studio/02-workspace.webp','assets/screenshots/omni-calc-studio/03-feature-1.webp'],
-   n:{en:'OmniCalc Studio',ar:'OmniCalc Studio'},
-   t:{en:'Calculator, accounting tape and unit converter in one window.',ar:'حاسبة وشريط محاسبي ومحول وحدات في نافذة واحدة.'},
-   f:{en:['Safe expression engine (no eval) with auto-closing parentheses and implied multiplication','Live result while you type','Collapsible scientific panel: trig in DEG/RAD, logs, powers, roots, factorial, 1/x, pi, e','+Tax, -Tax and -Disc% buttons with editable rates','Memory keys (MC, MR, M+, M-) and Ans','Accounting tape: timestamps, grand total, notes per line, reuse a result, export to TXT','Unit converter with 9 categories (Bit to Exabyte, network speed, length, weight, area, volume, time, speed, temperature) shown all at once, click a value to copy','6 color themes, light / dark, sizes S / M / L / XL, pin on top, auto-save of your state','Optional Win+R shortcut: type calc to open it, no admin rights'],
-      ar:['محرك آمن للتعبيرات (بدون eval) مع إغلاق الأقواس تلقائياً والضرب الضمني','نتيجة فورية أثناء الكتابة','لوحة علمية قابلة للطي: مثلثات بالدرجات والراديان ولوغاريتمات وأسس وجذور ومضروب و1/x وباي وe','أزرار +Tax و-Tax و-Disc% بنسب قابلة للتعديل','مفاتيح الذاكرة (MC وMR وM+ وM-) وAns','شريط محاسبي: وقت كل عملية ومجموع كلي وملاحظة لكل سطر وإعادة استخدام النتيجة وتصدير TXT','محول وحدات بـ9 فئات (من Bit إلى Exabyte وسرعة الشبكة والطول والوزن والمساحة والحجم والوقت والسرعة والحرارة) تظهر كلها معاً مع نسخ القيمة بنقرة','6 ثيمات لونية ووضع فاتح وداكن وأحجام S / M / L / XL وتثبيت فوق النوافذ وحفظ تلقائي لحالتك','اختصار اختياري Win+R: اكتب calc لفتحها، بدون صلاحيات مسؤول']}},
- { id:'hub', status:'soon', icon:'assets/icons/smart-file-hub.png', price:'', url:''
-   shots:['assets/screenshots/smart-file-hub/01-main.webp','assets/screenshots/smart-file-hub/02-workspace.webp','assets/screenshots/smart-file-hub/03-feature-1.webp'],
-   n:{en:'Smart File Hub',ar:'Smart File Hub'},
-   t:{en:'Sort crowded folders, batch-rename files and remove duplicates, with full undo.',ar:'رتّب المجلدات المزدحمة وأعد تسمية الملفات وأزل المكررات مع تراجع كامل.'},
-   f:{en:['Organize by file type, keywords in the name, or modification month','Smart sorting by content (Word, Excel, PDF) and real file-type detection','Custom rules and profiles you can save, import and export','Table or tree preview before anything runs, export the index to Excel or CSV','Smart rename patterns with {num}, {date}, {orig}, Arabic digits, Regex, case change, cleanup','Metadata: EXIF, ID3, Office properties; live preview that flags conflicts; drag and drop','Duplicates found by content, with choice of which copy to keep and action: recycle bin, move, or hard link','Clean empty, temporary and old files, and empty folders','Space reports by type, largest and oldest files, export to PDF, HTML, Excel','Full operation log, undo any operation, recoverable in-app trash','Automation (Pro): watch the Downloads folder and sort new files automatically','Arabic / English with RTL, 6 themes, keyboard shortcuts, first-run wizard, right-click folder menu','First 10 runs free, then purchase. Gumroad activation on up to 3 devices, works offline for 14 days after the last check']
-      ,ar:['تنظيم حسب نوع الملف أو الكلمات المفتاحية في الاسم أو شهر التعديل','فرز ذكي حسب المحتوى (Word وExcel وPDF) والتعرف على النوع الحقيقي للملف','قواعد مخصصة وملفات شخصية تُحفظ وتُستورد وتُصدَّر','معاينة جدولية أو شجرية قبل التنفيذ وتصدير الفهرس إلى Excel أو CSV','أنماط إعادة تسمية بمتغيرات {num} و{date} و{orig} وأرقام عربية وRegex وتحويل حالة الأحرف وتنظيف','بيانات وصفية: EXIF وID3 وخصائص Office ومعاينة حية تكشف التعارضات وسحب وإفلات','كشف المكررات بالمحتوى مع اختيار النسخة المحتفظ بها والإجراء: سلة أو نقل أو رابط صلب','تنظيف الملفات الفارغة والمؤقتة والقديمة والمجلدات الفارغة','تقارير المساحة حسب النوع وأكبر الملفات وأقدمها وتصدير PDF وHTML وExcel','سجل كامل للعمليات وتراجع عن أي عملية وسلة خاصة بالتطبيق قابلة للاسترجاع','الأتمتة (Pro): مراقبة مجلد التنزيلات وترتيب الملفات الجديدة تلقائياً','عربي وإنجليزي مع RTL و6 ثيمات واختصارات لوحة المفاتيح ومعالج ترحيب وقائمة كليك يمين','أول 10 عمليات مجانية ثم الشراء. تفعيل Gumroad لـ3 أجهزة ويعمل بدون إنترنت 14 يوماً بعد آخر تحقق']}},
- { id:'cast', status:'live', icon:'assets/icons/screencast-pro.png', price:'', url:STORE
-   shots:['assets/screenshots/screencast-pro/01-main.webp','assets/screenshots/screencast-pro/02-workspace.webp','assets/screenshots/screencast-pro/03-feature-1.webp'],
-   n:{en:'ScreenCast Pro',ar:'ScreenCast Pro'},
-   t:{en:'Screen recording built for courses, tutorials and walkthroughs.',ar:'تسجيل شاشة مصمم للدورات والشروحات التعليمية.'},
-   f:{en:['Record the full screen (multi-monitor), a custom region, or a single app window','Resolution and frame rate: 24 or 30 fps free, up to 60 fps and higher resolutions in Pro','Microphone and system audio together, webcam as a circle or rounded rectangle','The app and notes windows are kept out of the recording','Side command bar while recording: toggle live draw, cursor highlight, click display, mic, camera, notes and blur without stopping','Live draw on screen with 4 quick colors; mouse highlight and on-screen key presses','Floating teleprompter that viewers do not see in the video','Pro: auto-zoom on click and privacy blur; quick trim and export to MP4 or GIF','Global hotkeys, Arabic / English, light / dark / system, accent color, built-in guide (F1)'],
-      ar:['تسجيل الشاشة كاملة (تعدد الشاشات) أو منطقة مخصصة أو نافذة تطبيق محددة','دقة ومعدل إطارات: 24 أو 30 إطاراً مجاناً وحتى 60 ودقات أعلى في Pro','صوت الميكروفون والنظام معاً وكاميرا ويب دائرية أو مستطيلة بحواف دائرية','نافذة البرنامج والملاحظات لا تظهر داخل التسجيل','شريط أوامر جانبي أثناء التسجيل: الرسم والإبراز وإظهار النقرات والميكروفون والكاميرا والملاحظات والتمويه بدون إيقاف التسجيل','رسم مباشر على الشاشة بـ4 ألوان سريعة وإبراز المؤشر وإظهار ضغطات لوحة المفاتيح','ملقّن عائم لا يظهر للمشاهدين في الفيديو','Pro: تقريب تلقائي عند النقر وتمويه الخصوصية وقص سريع وتصدير MP4 أو GIF','اختصارات عامة وعربي / إنجليزي وفاتح وداكن وتلقائي ولون تمييز ودليل مدمج (F1)']}},
- { id:'img', status:'live', icon:'assets/icons/image-toolkit-pro.png', price:'', url:STORE
-   shots:['assets/screenshots/image-toolkit-pro/01-main.webp','assets/screenshots/image-toolkit-pro/02-workspace.webp','assets/screenshots/image-toolkit-pro/03-feature-1.webp'],
-   n:{en:'Image Toolkit Pro',ar:'Image Toolkit Pro'},
-   t:{en:'Compress, convert, resize and edit images in batches, offline.',ar:'اضغط وحوّل وغيّر حجم الصور وعدّلها دفعة واحدة وبدون إنترنت.'},
-   f:{en:['Compress to a quality or a target size in KB','Convert JPG, PNG, WebP, HEIC, BMP, TIFF, GIF, ICO and PDF','Resize by percent, width, height or exact size, with presets for Instagram, Stories, Facebook, YouTube, X, Full HD and 4K','Crop by ratio, exact size, edges, or as a transparent circle','Rotate, flip, and text (Arabic supported) or logo watermark','Remove background by solid color or GrabCut','Brightness, contrast, saturation, sharpness, blur, auto-enhance and 10 filters; upscale 2x to 4x','Meme maker, images to PDF, and metadata (EXIF, location) removal','Batch edit: resize, watermark, compress, convert and rename in one pass','Drag and drop files and folders, before / after preview, progress and cancel, results table','Originals are never modified; phone photo orientation fixed automatically','Free: up to 10 images at a time. Pro unlocks more tools and a higher limit'],
-      ar:['ضغط بجودة محددة أو بحجم مستهدف بالكيلوبايت','تحويل JPG وPNG وWebP وHEIC وBMP وTIFF وGIF وICO وPDF','تغيير الحجم بالنسبة أو العرض أو الارتفاع أو مقاس دقيق مع مقاسات جاهزة لإنستجرام وستوري وفيسبوك ويوتيوب وX وFull HD و4K','قص بنسبة أبعاد أو مقاس دقيق أو من الحواف أو على شكل دائرة شفافة','تدوير وقلب وعلامة مائية نصية (تدعم العربي) أو بشعار','إزالة الخلفية بلون موحد أو GrabCut','سطوع وتباين وتشبع وحدة وتمويه وتحسين تلقائي و10 فلاتر وتكبير من 2x إلى 4x','صانع ميمز وتحويل الصور إلى PDF وحذف البيانات الوصفية (EXIF والموقع)','تحرير بالجملة: تغيير حجم وعلامة مائية وضغط وتحويل وإعادة تسمية في خطوة واحدة','سحب وإفلات ملفات ومجلدات ومعاينة قبل / بعد وشريط تقدم وإلغاء وجدول نتائج','الأصل لا يتعدّل أبداً واتجاه صور الموبايل يُصلَّح تلقائياً','مجاني: حتى 10 صور في المرة. الـPro يفتح أدوات أكثر وحداً أعلى']}},
- { id:'vid', status:'soon', icon:'assets/icons/video-studio.png', price:'', url:''
-   shots:['assets/screenshots/video-studio/01-main.webp','assets/screenshots/video-studio/02-workspace.webp','assets/screenshots/video-studio/03-feature-1.webp'],
-   n:{en:'Video Studio',ar:'Video Studio'},
-   t:{en:'Multi-track video editor for your desktop.',ar:'برنامج مونتاج فيديو متعدد المسارات لسطح المكتب.'},
-   f:{en:['Multi-track timeline (video, audio, text), snapping, split, undo up to 50 steps, markers, freeze frame','Live preview in 16:9, 9:16, 1:1 and 4:5','Inspector: position, scale, rotation, opacity, blend modes, stabilization','Masks (rectangle, circle, split), chroma key, color correction (brightness, contrast, saturation, temperature and more)','Speed from 0.1x to 100x, reverse, speed curves','Keyframes for position, size, rotation and opacity with 4 easing curves','Text layers and templates, SRT import / export, Arabic and English','7 ready filters, .cube LUT files, and transitions: crossfade, dip to black, wipe, slide, zoom','Export 4K, 1080p, 720p or 540p at 24, 30 or 60 fps as MP4, MOV or GIF','Projects saved as .hvsp, Arabic / English, 5 accent colors, built-in guide (F1)','Free: preview, editing and saving are always free, plus 5 free exports'],
-      ar:['تايم لاين متعدد المسارات (فيديو وصوت ونص) والتقاط مغناطيسي وتقسيم وتراجع حتى 50 خطوة وعلامات وتجميد إطار','معاينة حية بأبعاد 16:9 و9:16 و1:1 و4:5','مفتّش: الموقع والحجم والدوران والشفافية وأنماط الدمج وتثبيت الاهتزاز','أقنعة (مستطيل ودائرة وتقسيم) وكروما وتصحيح ألوان (سطوع وتباين وتشبع وحرارة وغيرها)','سرعة من 0.1x إلى 100x وعكس ومنحنيات سرعة','إطارات مفتاحية للموقع والحجم والدوران والشفافية مع 4 منحنيات نعومة','طبقات نص وقوالب واستيراد وتصدير SRT بالعربية والإنجليزية','7 فلاتر جاهزة وملفات .cube LUT وانتقالات: تلاشي وعبر الأسود ومسح وانزلاق وزووم','تصدير 4K و1080p و720p و540p بمعدل 24 أو 30 أو 60 إطاراً بصيغ MP4 وMOV وGIF','مشاريع بصيغة .hvsp وعربي / إنجليزي و5 ألوان تمييز ودليل مدمج (F1)','مجاني: المعاينة والتحرير والحفظ دائماً، مع 5 عمليات تصدير مجانية']}}
+const STORE='https://hmzbytes.gumroad.com/';
+const products=[
+{id:'pdf',status:'live',category:'productivity',price:'$4.99+',image:'images/pdf-1.png',shots:['images/pdf-1.png','images/pdf-2.png','images/pdf-3.png'],icon:'▤',name:'PDF Toolkit Pro',tag:{en:'DOCUMENT WORKSPACE',ar:'مساحة عمل للمستندات'},desc:{en:'Take control of your PDFs — edit, organize, convert, protect, and process documents locally on your PC.',ar:'تحكّم في ملفات PDF — حرّر المستندات ونظّمها وحوّلها واحمِها وعالجها محلياً على جهازك.'},chips:{en:['15 PDF tools','OCR','AES-256 protection','Batch processing'],ar:['15 أداة PDF','OCR','حماية AES-256','معالجة دفعية']},url:'https://hmzbytes.gumroad.com/l/PDF-Toolkit-pro',features:{en:['Merge, split, rotate, delete, and reorder pages with drag and drop.','Compress PDFs using quality presets or a target file size.','Convert images to PDF and PDF pages to images.','Add page numbers and watermarks.','True text redaction that removes sensitive text.','AES-256 password protection: add or remove passwords.','Edit or clear metadata and extract text to TXT.','OCR to searchable PDF or TXT; batch process up to 20 files.','English and Arabic interface, themes, and built-in bilingual guide.','Free trial: 3 successful operations. Preview and undo are free.'],ar:['دمج وتقسيم وتدوير وحذف وترتيب الصفحات بالسحب والإفلات.','ضغط PDF بإعدادات جودة أو حجم مستهدف.','تحويل الصور إلى PDF وصفحات PDF إلى صور.','إضافة أرقام صفحات وعلامة مائية.','حذف النص الحساس فعلياً باستخدام التعتيم الحقيقي.','حماية بكلمة مرور AES-256 أو إزالتها.','تعديل البيانات الوصفية أو مسحها واستخراج النص إلى TXT.','OCR لإنشاء PDF قابل للبحث أو TXT، ومعالجة حتى 20 ملفاً دفعة واحدة.','واجهة عربية وإنجليزية وثيمات ودليل استخدام مدمج بلغتين.','تجربة مجانية: 3 عمليات ناجحة. المعاينة والتراجع مجانيان.']}},
+{id:'omni',status:'live',category:'productivity',price:'$0.99+',image:'images/omni-1.png',shots:['images/omni-1.png','images/omni-2.png','images/omni-3.png'],icon:'⌗',name:'OmniCalc Studio',tag:{en:'CALCULATE & CONVERT',ar:'احسب وحوّل'},desc:{en:'A versatile calculator, accounting tape, and multi-category unit converter — together in one compact window.',ar:'حاسبة متعددة الاستخدامات وشريط محاسبي ومحوّل وحدات متعدد الفئات، كل ذلك في نافذة واحدة.'},chips:{en:['Scientific calculator','Accounting tape','9 unit categories','Live results'],ar:['حاسبة علمية','شريط محاسبي','9 فئات للوحدات','نتائج فورية']},url:'https://hmzbytes.gumroad.com/l/OmniCalc-Studio',features:{en:['Safe expression engine with live results as you type.','Scientific functions: trigonometry, logarithms, powers, roots, factorial, and more.','Tax and discount buttons with editable rates.','Memory keys and previous-answer recall.','Accounting tape with timestamps, notes, grand total, and TXT export.','Unit converter with 9 categories, including data sizes and network speed.','Six color themes, light and dark modes, adjustable sizes, and always-on-top option.','Optional Win+R shortcut: type calc to open it, without admin rights.'],ar:['محرك آمن للتعبيرات مع نتائج فورية أثناء الكتابة.','وظائف علمية: مثلثات ولوغاريتمات وأسس وجذور ومضروب وغيرها.','أزرار للضريبة والخصم بنسب قابلة للتعديل.','مفاتيح ذاكرة واستدعاء آخر نتيجة.','شريط محاسبي بالتوقيت والملاحظات والمجموع الكلي وتصدير TXT.','محول وحدات بـ9 فئات، منها أحجام البيانات وسرعة الشبكة.','6 ثيمات لونية ووضع فاتح وداكن وأحجام قابلة للتعديل وخيار التثبيت فوق النوافذ.','اختصار اختياري Win+R: اكتب calc لفتح التطبيق دون صلاحيات مسؤول.']}},
+{id:'cast',status:'live',category:'creative',price:'',image:'images/cast-1.png',shots:['images/cast-1.png','images/cast-2.png','images/cast-3.png'],icon:'◉',name:'ScreenCast Pro',tag:{en:'SCREEN RECORDING STUDIO',ar:'استوديو تسجيل الشاشة'},desc:{en:'Record, explain, and present with screen capture, microphone, webcam, visual effects, and built-in presenter tools.',ar:'سجّل واشرح وقدّم محتواك بتسجيل الشاشة والميكروفون والكاميرا والتأثيرات المرئية وأدوات العرض المدمجة.'},chips:{en:['Up to 4K','Webcam overlay','Teleprompter','Mouse & key effects'],ar:['حتى 4K','كاميرا مدمجة','ملقّن نصوص','تأثيرات المؤشر والمفاتيح']},url:STORE,features:{en:['Capture the full screen, a selected monitor, a custom region, or an application window.','Record up to 4K and 60 FPS in Pro; output high-quality H.264 MP4.','Capture microphone audio and system audio when a Stereo Mix device is available.','Add a webcam overlay in circular or rounded-rectangle shape.','Highlight the mouse, show click effects, and display pressed keys.','Use a floating control bar to pause, resume, stop, and toggle effects while recording.','Read from a built-in teleprompter or draw directly over the screen.','Pro tools include automatic zoom, privacy blur, quick trimming, and GIF export.','Arabic and English interface, themes, accent colors, and built-in bilingual guide.','Free version: up to 5 minutes, 480p/720p, 30 FPS, and watermark.'],ar:['تسجيل الشاشة كاملة أو شاشة محددة أو منطقة مخصصة أو نافذة تطبيق.','تسجيل حتى 4K و60 إطاراً في نسخة Pro، بصيغة H.264 MP4 عالية الجودة.','تسجيل الميكروفون وصوت النظام عند توفر جهاز Stereo Mix.','إضافة كاميرا ويب بشكل دائري أو مستطيل بحواف دائرية.','إبراز مؤشر الماوس وإظهار تأثيرات النقر والمفاتيح المضغوطة.','شريط تحكم عائم للإيقاف المؤقت والاستئناف والإيقاف وتبديل التأثيرات أثناء التسجيل.','استخدام ملقّن نصوص مدمج أو الرسم مباشرة فوق الشاشة.','أدوات Pro تشمل التقريب التلقائي وتمويه الخصوصية والقص السريع وتصدير GIF.','واجهة عربية وإنجليزية وثيمات وألوان تمييز ودليل استخدام مدمج بلغتين.','النسخة المجانية: حتى 5 دقائق، ودقة 480p/720p، و30 إطاراً، مع علامة مائية.']}},
+{id:'img',status:'live',category:'creative',price:'',image:'images/img-1.png',shots:['images/img-1.png','images/img-2.png','images/img-3.png'],icon:'▧',name:'Image Toolkit Pro',tag:{en:'COMPLETE IMAGE WORKSPACE',ar:'مساحة عمل متكاملة للصور'},desc:{en:'Compress, convert, resize, enhance, and batch-process images in one private Windows workspace.',ar:'اضغط الصور وحوّلها وغيّر أحجامها وحسّنها وعالج مجموعات كاملة داخل مساحة عمل خاصة على ويندوز.'},chips:{en:['14 image tools','Batch processing','Background removal','Metadata cleanup'],ar:['14 أداة للصور','معالجة دفعية','إزالة الخلفية','حذف البيانات الوصفية']},url:STORE,features:{en:['Compress images while preserving excellent visual quality.','Convert JPG, PNG, WebP, HEIC, BMP, TIFF, GIF, ICO, and PDF.','Resize by pixels, percentage, or ready-made social media presets.','Crop by aspect ratio, custom dimensions, edges, or circular shapes.','Rotate, flip, and add text or logo watermarks, including repeated watermarks.','Adjust brightness, contrast, colors, sharpness, and blur; use built-in filters.','Upscale images 2x to 4x with sharpening.','Remove backgrounds, create memes with Arabic text, and combine images into PDF.','Remove EXIF metadata, including location, camera information, and timestamps.','Batch edit, resize, watermark, rename, and convert hundreds of images in one workflow.','Face blurring is available as a Pro feature.','Local processing: images are not uploaded to external servers.'],ar:['ضغط الصور مع الحفاظ على جودة بصرية ممتازة.','تحويل JPG وPNG وWebP وHEIC وBMP وTIFF وGIF وICO وPDF.','تغيير الحجم بالبكسل أو النسبة أو مقاسات جاهزة لمنصات التواصل.','قص بنسبة أبعاد أو أبعاد مخصصة أو من الحواف أو بشكل دائري.','تدوير الصور وقلبها وإضافة علامة مائية نصية أو شعار، منفردة أو متكررة.','ضبط السطوع والتباين والألوان والحدة والتمويه واستخدام الفلاتر.','تكبير الصور من 2x إلى 4x مع زيادة الحدة.','إزالة الخلفية وإنشاء الميمز بالعربية ودمج الصور في PDF.','حذف بيانات EXIF، ومنها الموقع ومعلومات الكاميرا والتوقيت.','تحرير وتغيير حجم ووضع علامة مائية وإعادة تسمية وتحويل مئات الصور في سير عمل واحد.','تمويه الوجوه متاح ضمن مزايا Pro.','المعالجة محلية: لا يتم رفع الصور إلى خوادم خارجية.']}},
+{id:'hub',status:'soon',category:'productivity',price:'',image:'images/hub-1.png',shots:['images/hub-1.png','images/hub-2.png','images/hub-3.png'],icon:'⌂',name:'Smart File Hub',tag:{en:'FILE ORGANIZATION',ar:'تنظيم الملفات'},desc:{en:'Bring order to crowded folders with smart sorting, batch renaming, duplicate detection, and full undo.',ar:'نظّم المجلدات المزدحمة بالفرز الذكي وإعادة التسمية الجماعية واكتشاف المكررات مع إمكانية التراجع.'},chips:{en:['Smart sorting','Batch rename','Duplicate finder','Full undo'],ar:['فرز ذكي','إعادة تسمية جماعية','كشف المكررات','تراجع كامل']},features:{en:['Organize files by type, name keywords, or modification month.','Smart rename patterns, metadata tools, and saved rules.','Detect duplicates by file content and choose what to keep.','Preview operations, export reports, and undo actions.','Automation options for organizing new downloads.'],ar:['تنظيم الملفات حسب النوع أو الكلمات المفتاحية أو شهر التعديل.','أنماط ذكية لإعادة التسمية وأدوات بيانات وصفية وقواعد محفوظة.','اكتشاف الملفات المكررة حسب المحتوى واختيار النسخة المحتفظ بها.','معاينة العمليات وتصدير التقارير والتراجع عن الإجراءات.','خيارات أتمتة لتنظيم الملفات الجديدة في مجلد التنزيلات.']}},
+{id:'video',status:'soon',category:'creative',price:'',image:'images/vid-1.png',shots:['images/vid-1.png','images/vid-2.png','images/vid-3.png'],icon:'▶',name:'Video Studio',tag:{en:'VIDEO EDITING',ar:'تحرير الفيديو'},desc:{en:'A multi-track desktop video editor concept for shaping clips, sound, titles, effects, and finished exports.',ar:'محرر فيديو مكتبي متعدد المسارات لتنسيق المقاطع والصوت والعناوين والتأثيرات وتصدير العمل النهائي.'},chips:{en:['Multi-track timeline','Keyframes','Color tools','4K export'],ar:['خط زمني متعدد المسارات','إطارات مفتاحية','أدوات ألوان','تصدير 4K']},features:{en:['Multi-track timeline for video, audio, and text.','Trim, split, reorder, and undo edits.','Keyframes, masks, chroma key, and color correction.','Text layers, subtitles, filters, transitions, and export options.'],ar:['خط زمني متعدد المسارات للفيديو والصوت والنص.','قص وتقسيم وإعادة ترتيب وتراجع عن التعديلات.','إطارات مفتاحية وأقنعة وكروما وتصحيح ألوان.','طبقات نص وترجمة وفلاتر وانتقالات وخيارات تصدير.']}}
 ];
 
-const UI = {
- en:{lang:'العربية',store:'Gumroad store',nav:['Products','Videos','About','FAQ'],
-  heroT:'Desktop software that saves time and keeps your files on your PC.',
-  heroS:'Simple tools that work offline, never send your files anywhere, and support both English and Arabic.',
-  heroA:'See the software',heroB:'Open the Gumroad store',
-  prodT:'Software',prodS:'Available now and coming soon. Purchases are handled on Gumroad.',
-  vidT:'Videos',vidNone:'Demo videos will appear here soon.',
-  details:'Details',buy:'Buy on Gumroad',soon:'Coming soon',live:'Available',
-  featT:'Features',noFeat:'Full details will be added at release.',shotT:'Screenshots',vidOne:'Video',
-  aboutT:'About HMZ-Bytes',
-  aboutP:"Hi, I'm Hamza. I create software and digital products that save you time and keep your data safe. My tools are built on one idea: they should be simple to use, work offline, and never send your files anywhere.",
-  pillars:[['Local processing','Files are processed on your computer, not on a server.'],['English and Arabic','Left-to-right and right-to-left layouts in the apps.'],['Direct support','Questions or ideas? Message me on Gumroad.']],
-  faqT:'FAQ',
-  faq:[['How do I buy?','Click “Buy on Gumroad” on any available product. You pay on Gumroad and get your download link and license key there.'],
-       ['Do the apps work offline?','Yes. File processing happens on your computer. An internet connection is needed only to verify and activate your license.'],
-       ['Can I use the apps in Arabic?','Yes. The apps switch between English and Arabic, with light and dark themes.'],
-       ['Why can’t I buy some products yet?','Those apps are still in development. Their buy buttons turn on once they are published on Gumroad.']],
-  fBio:'Independent desktop software by Hamza Mansour.',
-  fPrivT:'Privacy',fPriv:'The apps process your files locally and do not upload them. This website collects no payment details.',
-  fPayT:'Payments and refunds',fPay:'All payments, licenses and refunds are handled by Gumroad on hmzbytes.gumroad.com.'},
- ar:{lang:'English',store:'متجر Gumroad',nav:['المنتجات','الفيديوهات','عن HMZ-Bytes','الأسئلة'],
-  heroT:'برامج مكتبية توفر وقتك وتحفظ ملفاتك على جهازك.',
-  heroS:'أدوات بسيطة تعمل بدون إنترنت ولا ترسل ملفاتك لأي جهة، وتدعم العربية والإنجليزية.',
-  heroA:'استعرض البرامج',heroB:'افتح متجر Gumroad',
-  prodT:'البرامج',prodS:'متاح الآن وقادم قريباً. الشراء يتم عبر Gumroad.',
-  vidT:'الفيديوهات',vidNone:'فيديوهات الشرح ستظهر هنا قريباً.',
-  details:'التفاصيل',buy:'اشترِ عبر Gumroad',soon:'قريباً',live:'متاح',
-  featT:'المميزات',noFeat:'ستضاف التفاصيل الكاملة عند الإطلاق.',shotT:'لقطات الشاشة',vidOne:'فيديو',
-  aboutT:'عن HMZ-Bytes',
-  aboutP:'مرحباً، أنا حمزة. أصمم تطبيقات ومنتجات رقمية توفر وقتك وتحافظ على أمان بياناتك. أدواتي مبنية على فكرة واحدة: أن تكون سهلة الاستخدام، وتعمل بدون إنترنت، ولا ترسل ملفاتك إلى أي مكان.',
-  pillars:[['معالجة محلية','الملفات تُعالج على جهازك وليس على خادم.'],['عربي وإنجليزي','واجهات من اليمين لليسار ومن اليسار لليمين داخل البرامج.'],['دعم مباشر','عندك سؤال أو فكرة؟ راسلني عبر Gumroad.']],
-  faqT:'الأسئلة الشائعة',
-  faq:[['كيف أشتري؟','اضغط «اشترِ عبر Gumroad» على أي برنامج متاح. تدفع على Gumroad وتستلم رابط التحميل ومفتاح الترخيص هناك.'],
-       ['هل تعمل البرامج بدون إنترنت؟','نعم. معالجة الملفات تتم على جهازك. الإنترنت مطلوب فقط للتحقق من الترخيص وتفعيله.'],
-       ['هل البرامج بالعربي؟','نعم. البرامج تتبدل بين العربية والإنجليزية مع وضع فاتح وداكن.'],
-       ['لماذا لا أستطيع شراء بعض البرامج؟','هذه البرامج ما زالت قيد التطوير. يعمل زر الشراء فور نشرها على Gumroad.']],
-  fBio:'برمجيات مكتبية مستقلة من تطوير حمزة منصور.',
-  fPrivT:'الخصوصية',fPriv:'البرامج تعالج ملفاتك محلياً ولا ترفعها. هذا الموقع لا يجمع أي بيانات دفع.',
-  fPayT:'الدفع والاسترداد',fPay:'كل المدفوعات والتراخيص والاسترداد تتم عبر Gumroad على hmzbytes.gumroad.com.'}
+const UI={
+en:{
+navProducts:'Products',navWhy:'Why HMZ',navPrivacy:'Privacy',navStories:'Explore',navAbout:'About',navFaq:'FAQ',store:'Explore Store ↗',
+heroEyebrow:'INDEPENDENT DESKTOP SOFTWARE',heroTitle:'Your work.<br><span class="gradient-text">Your tools.</span><br>Your control.',heroText:'Meet a smarter collection of Windows apps built to make everyday work simpler — with powerful features, thoughtful design, and your files staying on your device.',heroCta:'Explore the apps <span>↘</span>',heroStore:'Visit the Gumroad store ↗',heroNote1:'Windows desktop apps',heroNote2:'Arabic + English',heroNote3:'Local-first processing',mockTitle:'A toolkit for every task',mockPdf:'Documents, under control',mockImg:'Images, beautifully handled',mockCast:'Record. Explain. Present.',mockHub:'Bring order to your files',mockBottom:'Designed for focus. Built for control.',floatOne:'Made for real workflows',floatOneSub:'Less switching. More doing.',floatTwo:'Your files stay yours',floatTwoSub:'Local processing in supported apps.',
+trust1:'Purpose-built Windows tools',trust2:'English & Arabic interfaces',trust3:'Thoughtful, practical features',trust4:'Your files processed locally',
+productsEyebrow:'THE SOFTWARE COLLECTION',productsTitle:'Meet your next <span class="gradient-text">favorite tool.</span>',productsText:'From documents and images to screen recording and file organization — discover focused desktop apps designed to solve real everyday problems.',filterAll:'All apps',filterLive:'Available now',filterProd:'Productivity',filterCreative:'Creative tools',filterUpcoming:'Coming soon',productHint:'Select an app to explore what it can do.',available:'AVAILABLE NOW',coming:'COMING SOON',details:'Explore features',buy:'Get it on Gumroad ↗',storeLink:'Visit Gumroad store ↗',bandTitle:'Not sure where to start?',bandText:'Browse the complete HMZ-Bytes collection and find the right tool for your workflow.',bandBtn:'Browse all products ↗',
+whyEyebrow:'THE HMZ-BYTES APPROACH',whyTitle:'Software should work <span class="gradient-text">the way you do.</span>',whyText:'A useful app is more than a long feature list. It should feel clear from the first click, stay out of your way, and help you finish the task.',panel1Title:'Power without the clutter.',panel1Text:'Focused workspaces bring related tools together, so you spend less time jumping between apps and more time getting things done.',p1a:'Organized interfaces',p1b:'Practical workflows',p1c:'Useful shortcuts',p1d:'Built-in guidance',panel2Title:'Made to feel familiar.',panel2Text:'Switch between Arabic and English, choose a comfortable appearance, and make the workspace feel right for you.',p2a:'Arabic RTL support',p2b:'English LTR support',p2c:'Light & dark themes',p2d:'Customizable settings',
+journeyEyebrow:'A BETTER WAY TO GET IT DONE',journeyTitle:'One task. A more <span class="gradient-text">thoughtful workflow.</span>',journeyText:"The right tool can turn a scattered process into a clear sequence. That's the thinking behind the HMZ-Bytes collection.",j1Title:'Start with the task.',j1Text:'Choose a focused app for the job — managing documents, preparing images, recording a tutorial, or organizing files.',j2Title:'Stay in one workspace.',j2Text:'Use the tools you need in a clear desktop environment, with helpful controls and practical options close at hand.',j3Title:'Keep control of the result.',j3Text:'Save your work locally and move on with your day. No unnecessary detours, no needless complexity.',
+privacyEyebrow:'LOCAL-FIRST BY DESIGN',privacyTitle:'Your files are <span class="gradient-text">your business.</span>',privacyText:'For apps that process your documents, images, and recordings locally, your work stays on your computer instead of being sent to an online editing service.',privacy1:'No uploading your working files to third-party processing websites in supported apps.',privacy2:'Work with your files directly on your Windows PC.',privacy3:'Internet access may still be used for license activation, verification, updates, or app catalog features.',
+storiesEyebrow:'GO BEYOND THE PRODUCT PAGE',storiesTitle:'Explore. Learn. <span class="gradient-text">Make more.</span>',storiesText:'A growing space for product walkthroughs, practical tips, and ideas that help you get more from your desktop tools.',videoTitle:'A closer look at HMZ-Bytes',videoText:'Watch the brand introduction and discover the thinking behind the tools.',tile1Tag:'HOW-TO GUIDES',tile1Title:'Make every feature count.',tile1Text:'Practical walkthroughs for everyday tasks, from document workflows to image preparation.',tile2Tag:'PRODUCT UPDATES',tile2Title:"See what's new.",tile2Text:'Follow new releases, improvements, and additions to the HMZ-Bytes software collection.',
+aboutEyebrow:'A SMALL STUDIO. A CLEAR PURPOSE.',aboutText1:'HMZ-Bytes is an independent software project focused on creating practical Windows applications that make everyday digital work easier.',aboutText2:"The idea is simple: bring useful capabilities into thoughtfully designed tools, respect the user's workflow, and keep control where it belongs — with the person using the software.",value1Title:'Useful by design',value1Text:'Features built around real tasks.',value2Title:'Clear experience',value2Text:'Interfaces that feel approachable.',value3Title:'User control',value3Text:'Your settings, files, and workflow.',
+faqEyebrow:'GOOD TO KNOW',faqTitle:'A few things <span class="gradient-text">you may wonder.</span>',faqText:'Quick answers before you choose your next desktop tool.',ctaEyebrow:'YOUR NEXT TOOL IS WAITING',ctaTitle:'Make room for a <span class="gradient-text">better workflow.</span>',ctaText:'Explore the HMZ-Bytes collection and find a desktop app that makes your next task simpler.',ctaBtn:'Discover HMZ-Bytes on Gumroad ↗',
+footerBio:'Independent Windows software, thoughtfully made by Hamza Mansour.',footerExplore:'Explore',footerHelp:'Help & information',footerSupport:'Store & support',footerStore:'Official store',footerPayment:'Purchases and license delivery are handled through Gumroad.',rights:'All rights reserved.',footerMade:'Built with care. Made for useful work.',
+faq:[['Where can I buy an app?','Use the product’s Gumroad link when available. For products whose direct checkout link is not listed here, visit the official HMZ-Bytes store.'],['Do the apps work offline?','The supported file-processing features run locally on your computer. An internet connection may be needed for license activation, verification, updates, or catalog features.'],['Are the apps available in Arabic?','The apps featured here include Arabic and English interface support. Availability of specific features varies by application.'],['Are all products available now?','Products marked “Available now” are published or available through the store. Products marked “Coming soon” are not currently offered for purchase.'],['Where are payments and licenses handled?','Purchases, payment processing, and license delivery are handled through Gumroad for Gumroad-listed products.']]
+},
+ar:{
+navProducts:'البرامج',navWhy:'لماذا HMZ؟',navPrivacy:'الخصوصية',navStories:'اكتشف المزيد',navAbout:'عن المشروع',navFaq:'الأسئلة الشائعة',store:'تصفّح المتجر ↗',
+heroEyebrow:'برمجيات مكتبية مستقلة',heroTitle:'عملك.<br><span class="gradient-text">أدواتك.</span><br>تحكّمك.',heroText:'اكتشف مجموعة أكثر ذكاءً من تطبيقات ويندوز المصممة لتجعل مهامك اليومية أسهل؛ بمميزات قوية وتصميم مدروس وملفات تظل على جهازك.',heroCta:'اكتشف التطبيقات <span>↙</span>',heroStore:'زيارة متجر Gumroad ↗',heroNote1:'تطبيقات ويندوز',heroNote2:'العربية والإنجليزية',heroNote3:'معالجة محلية للملفات',mockTitle:'أدوات لكل مهمة',mockPdf:'مستنداتك تحت سيطرتك',mockImg:'تعامل احترافي مع الصور',mockCast:'سجّل. اشرح. قدّم.',mockHub:'أعد النظام إلى ملفاتك',mockBottom:'مصمم للتركيز. صُنع لمنحك التحكم.',floatOne:'مصمم لسير العمل الحقيقي',floatOneSub:'تنقّل أقل. إنجاز أكثر.',floatTwo:'ملفاتك تظل ملكك',floatTwoSub:'معالجة محلية في التطبيقات المدعومة.',
+trust1:'أدوات ويندوز لمهام محددة',trust2:'واجهات عربية وإنجليزية',trust3:'مميزات عملية ومدروسة',trust4:'معالجة ملفاتك محلياً',
+productsEyebrow:'مجموعة التطبيقات',productsTitle:'اكتشف أداتك <span class="gradient-text">المفضلة القادمة.</span>',productsText:'من المستندات والصور إلى تسجيل الشاشة وتنظيم الملفات؛ اكتشف تطبيقات مكتبية متخصصة صُممت لحل مشكلات يومية حقيقية.',filterAll:'كل التطبيقات',filterLive:'متاح الآن',filterProd:'الإنتاجية',filterCreative:'الأدوات الإبداعية',filterUpcoming:'قريباً',productHint:'اختر تطبيقاً لتكتشف ما يمكنه إنجازه.',available:'متاح الآن',coming:'قريباً',details:'اكتشف المميزات',buy:'احصل عليه عبر Gumroad ↗',storeLink:'زيارة متجر Gumroad ↗',bandTitle:'لا تعرف من أين تبدأ؟',bandText:'تصفّح مجموعة HMZ-Bytes كاملة واختر الأداة المناسبة لطريقة عملك.',bandBtn:'تصفّح كل المنتجات ↗',
+whyEyebrow:'فلسفة HMZ-BYTES',whyTitle:'يجب أن يعمل البرنامج <span class="gradient-text">بطريقتك أنت.</span>',whyText:'التطبيق المفيد ليس مجرد قائمة طويلة من المميزات؛ بل يجب أن يكون واضحاً من أول نقرة، وألا يعطّل تركيزك، وأن يساعدك على إنجاز مهمتك.',panel1Title:'قوة بلا تعقيد.',panel1Text:'نجمع الأدوات المرتبطة في مساحة عمل واحدة، لتقضي وقتاً أقل في التنقل بين البرامج ووقتاً أكثر في الإنجاز.',p1a:'واجهات منظمة',p1b:'سير عمل عملي',p1c:'اختصارات مفيدة',p1d:'إرشادات مدمجة',panel2Title:'تجربة تشبهك.',panel2Text:'انتقل بين العربية والإنجليزية، واختر المظهر المريح لك، واجعل مساحة العمل مناسبة لطريقتك.',p2a:'دعم العربية RTL',p2b:'دعم الإنجليزية LTR',p2c:'مظهر فاتح وداكن',p2d:'إعدادات قابلة للتخصيص',
+journeyEyebrow:'طريقة أفضل لإنجاز مهامك',journeyTitle:'مهمة واحدة. <span class="gradient-text">وسير عمل أكثر ذكاءً.</span>',journeyText:'الأداة المناسبة تحوّل الخطوات المتفرقة إلى مسار واضح. هذه هي الفكرة التي تقوم عليها مجموعة HMZ-Bytes.',j1Title:'ابدأ من المهمة.',j1Text:'اختر التطبيق المناسب: إدارة المستندات، تجهيز الصور، تسجيل شرح، أو تنظيم الملفات.',j2Title:'اعمل داخل مساحة واحدة.',j2Text:'استخدم الأدوات التي تحتاجها داخل بيئة مكتبية واضحة، مع عناصر تحكم وخيارات عملية في متناول يدك.',j3Title:'احتفظ بالتحكم في النتيجة.',j3Text:'احفظ عملك محلياً وانتقل إلى مهمتك التالية؛ بلا خطوات جانبية غير ضرورية ولا تعقيد زائد.',
+privacyEyebrow:'الخصوصية تبدأ من التصميم',privacyTitle:'ملفاتك <span class="gradient-text">شأنك وحدك.</span>',privacyText:'في التطبيقات التي تعالج المستندات والصور والتسجيلات محلياً، يظل عملك على جهازك بدلاً من إرساله إلى خدمات تحرير عبر الإنترنت.',privacy1:'لا حاجة لرفع ملفات العمل إلى مواقع معالجة خارجية في التطبيقات المدعومة.',privacy2:'تعامل مع ملفاتك مباشرة على جهاز Windows الخاص بك.',privacy3:'قد يظل الإنترنت مطلوباً لتفعيل الترخيص والتحقق منه والتحديثات أو ميزات دليل التطبيقات.',
+storiesEyebrow:'تجاوز صفحة المنتج',storiesTitle:'اكتشف. تعلّم. <span class="gradient-text">أنجز المزيد.</span>',storiesText:'مساحة تتوسع باستمرار للشروحات والنصائح العملية والأفكار التي تساعدك على الاستفادة القصوى من أدواتك المكتبية.',videoTitle:'تعرّف أكثر على HMZ-Bytes',videoText:'شاهد الفيديو التعريفي واكتشف الفكرة وراء التطبيقات.',tile1Tag:'شروحات عملية',tile1Title:'استفد من كل ميزة.',tile1Text:'شروحات تطبيقية للمهام اليومية، من التعامل مع المستندات إلى تجهيز الصور.',tile2Tag:'تحديثات المنتجات',tile2Title:'اكتشف كل جديد.',tile2Text:'تابع الإصدارات الجديدة والتحسينات والإضافات إلى مجموعة تطبيقات HMZ-Bytes.',
+aboutEyebrow:'مشروع مستقل. هدف واضح.',aboutText1:'HMZ-Bytes مشروع برمجيات مستقل يركز على تطوير تطبيقات عملية لنظام Windows تجعل العمل الرقمي اليومي أكثر سهولة.',aboutText2:'الفكرة بسيطة: تقديم إمكانيات مفيدة داخل أدوات مصممة بعناية، واحترام طريقة عمل المستخدم، وإبقاء التحكم في المكان الصحيح؛ بيد الشخص الذي يستخدم البرنامج.',value1Title:'الفائدة أولاً',value1Text:'مميزات مبنية حول مهام حقيقية.',value2Title:'تجربة واضحة',value2Text:'واجهات سهلة وقريبة للمستخدم.',value3Title:'تحكم المستخدم',value3Text:'إعداداتك وملفاتك وطريقة عملك.',
+faqEyebrow:'معلومات تهمك',faqTitle:'أسئلة قد <span class="gradient-text">تدور في ذهنك.</span>',faqText:'إجابات سريعة قبل اختيار تطبيقك المكتبي القادم.',ctaEyebrow:'أداتك القادمة في انتظارك',ctaTitle:'افتح مساحة <span class="gradient-text">لسير عمل أفضل.</span>',ctaText:'اكتشف مجموعة HMZ-Bytes واختر تطبيقاً مكتبياً يجعل مهمتك القادمة أسهل.',ctaBtn:'اكتشف HMZ-Bytes على Gumroad ↗',
+footerBio:'برمجيات مستقلة لنظام Windows، من تطوير حمزة منصور بعناية.',footerExplore:'استكشف',footerHelp:'المساعدة والمعلومات',footerSupport:'المتجر والدعم',footerStore:'المتجر الرسمي',footerPayment:'تتم عمليات الشراء وتسليم التراخيص عبر Gumroad.',rights:'جميع الحقوق محفوظة.',footerMade:'صُنع بعناية. لإنجاز أعمال مفيدة.',
+faq:[['أين يمكنني شراء التطبيقات؟','استخدم رابط Gumroad الموجود داخل صفحة التطبيق إن كان متاحاً. وإذا لم يظهر رابط شراء مباشر، يمكنك زيارة متجر HMZ-Bytes الرسمي.'],['هل تعمل التطبيقات بدون إنترنت؟','تعمل وظائف معالجة الملفات المدعومة محلياً على جهازك. وقد تحتاج إلى الإنترنت لتفعيل الترخيص والتحقق منه والتحديثات أو ميزات دليل التطبيقات.'],['هل التطبيقات تدعم اللغة العربية؟','التطبيقات المعروضة هنا تتضمن دعماً لواجهات العربية والإنجليزية. وقد تختلف المميزات المحددة من تطبيق لآخر.'],['هل جميع المنتجات متاحة الآن؟','المنتجات التي تحمل علامة «متاح الآن» منشورة أو متاحة عبر المتجر. أما المنتجات التي تحمل علامة «قريباً» فلم تُطرح للشراء حالياً.'],['أين تتم المدفوعات وتسليم التراخيص؟','تتم عمليات الشراء ومعالجة الدفع وتسليم التراخيص عبر Gumroad للمنتجات المعروضة على المتجر.']]
+}
 };
-
-let L = 'en';
-try { L = localStorage.getItem('lang') || ((navigator.language||'').startsWith('ar') ? 'ar' : 'en'); } catch(e){}
-const $ = id => document.getElementById(id);
-const T = k => UI[L][k];
-
-function badge(p){
-  return p.status==='live'
-   ? `<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">${T('live')}</span>`
-   : `<span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-800">${T('soon')}</span>`;
+let lang='en';
+try{lang=localStorage.getItem('hmz-lang')||((navigator.language||'').toLowerCase().startsWith('ar')?'ar':'en')}catch(e){}
+const $=id=>document.getElementById(id);
+const tr=k=>UI[lang][k]??k;
+function applyLang(){
+ document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.body.dir=lang==='ar'?'rtl':'ltr';$('langBtn').textContent=lang==='ar'?'English':'العربية';
+ document.querySelectorAll('[data-i]').forEach(el=>{const k=el.dataset.i;if(UI[lang][k]!==undefined)el.innerHTML=UI[lang][k]});
+ $('faqList').innerHTML=UI[lang].faq.map(([q,a])=>`<details class="faqItem"><summary>${q}</summary><div class="faqAnswer">${a}</div></details>`).join('');
+ renderProducts();
 }
-function buyBtn(p, cls){
-  return p.status==='live' && p.url
-   ? `<a href="${p.url}" target="_blank" rel="noopener" class="${cls} bg-sky hover:bg-sky/90 text-white text-center font-bold">${T('buy')}${p.price?` <span class="ltr">(${p.price})</span>`:''}</a>`
-   : `<span class="${cls} bg-slate-100 text-slate-400 text-center font-semibold cursor-not-allowed">${T('soon')}</span>`;
+function productCard(p){
+ const live=p.status==='live';
+ const price=p.price?`<span class="price">${p.price}</span>`:'';
+ const status=live?tr('available'):tr('coming');
+ const buy=live?(p.url===STORE?`<a class="btn btn-primary" href="${STORE}" target="_blank" rel="noopener">${tr('storeLink')}</a>`:`<a class="btn btn-primary" href="${p.url}" target="_blank" rel="noopener">${tr('buy')}</a>`):`<span class="btn btn-ghost" aria-disabled="true">${tr('coming')}</span>`;
+ const chips=p.chips[lang].map(x=>`<span>${x}</span>`).join('');
+ return `<article class="productCard reveal" data-category="${p.category}">
+  <div class="productVisual"><div class="visualFallback">${p.icon}</div><img src="${p.image}" alt="${p.name}" loading="lazy" onload="this.parentElement.classList.add('has-image')" onerror="this.remove()"><span class="productBadge">${status}</span></div>
+  <div class="productBody"><div class="productMeta"><span>${p.tag[lang]}</span>${price}</div><h3>${p.name}</h3><p>${p.desc[lang]}</p><div class="miniFeatures">${chips}</div><div class="cardActions"><button class="btn btn-ghost" data-details="${p.id}">${tr('details')}</button>${buy}</div></div>
+ </article>`;
 }
-
-function render(){
-  document.documentElement.lang = L;
-  document.documentElement.dir = L==='ar' ? 'rtl' : 'ltr';
-  $('lang').textContent = T('lang'); $('storeBtn').textContent = T('store');
-  $('nav').innerHTML = ['products','videos','about','faq'].map((h,i)=>`<a href="#${h}" class="hover:text-white">${T('nav')[i]}</a>`).join('');
-  ['heroT','heroS','heroA','heroB','prodT','prodS','vidT','aboutT','aboutP','faqT','fBio','fPrivT','fPriv','fPayT','fPay'].forEach(k=>$(k).textContent=T(k));
-
-  $('grid').innerHTML = PRODUCTS.map(p=>`
-    <article class="bg-white rounded-2xl border border-slate-200 p-5 flex flex-col">
-      <div class="flex items-center justify-between mb-3">${badge(p)}<span class="text-sm font-bold ltr">${p.price||''}</span></div>
-      ${p.shots[0]?`<img src="${p.shots[0]}" alt="${p.n[L]}" loading="lazy" class="rounded-xl border border-slate-200 mb-3 w-full h-40 object-cover" onerror="this.remove()">`:''}
-      <div class="flex items-center gap-3 mb-2">
-        ${p.icon? `<img src="${p.icon}" alt="" loading="lazy" class="w-11 h-11 rounded-xl object-contain border border-slate-200 bg-white p-1" onerror="this.remove()">`:''}
-        <h3 class="text-lg font-bold">${p.n[L]}</h3>
-      </div>
-      <p class="text-sm text-slate-600 mt-1 mb-5 flex-1">${p.t[L]}</p>
-      <div class="flex gap-2">
-        <button data-p="${p.id}" class="flex-1 px-3 py-2.5 rounded-xl bg-navy text-white text-sm font-semibold">${T('details')}</button>
-        ${buyBtn(p,'flex-1 px-3 py-2.5 rounded-xl text-sm')}
-      </div>
-    </article>`).join('');
-
-  $('vids').innerHTML = `
-    <div class="md:col-span-2">
-      <video id="brandVideo" class="w-full aspect-video rounded-xl border border-slate-200 bg-slate-900" controls playsinline preload="metadata" poster="${BRAND_VIDEO_POSTER}">
-        <source src="${BRAND_VIDEO}" type="video/mp4">
-        ${L==='ar'?'متصفحك لا يدعم تشغيل فيديو MP4.':'Your browser does not support MP4 video playback.'}
-      </video>
-      <p class="mt-2 font-semibold text-sm">${L==='ar'?'الفيديو التعريفي لـ HMZ-Bytes':'Meet HMZ-Bytes'}</p>
-      <p id="videoFallback" class="hidden text-xs text-slate-500 mt-1">${L==='ar'?'سيظهر الفيديو هنا بعد رفع ملف assets/videos/hmzbytes-intro.mp4 إلى المستودع.':'The video will appear here after assets/videos/hmzbytes-intro.mp4 is uploaded to the repository.'}</p>
-    </div>`;
-  const brandVideo = $('brandVideo');
-  if (brandVideo) brandVideo.addEventListener('error', () => $('videoFallback')?.classList.remove('hidden'));
-
-  $('pillars').innerHTML = T('pillars').map(([a,b])=>`<div class="bg-white rounded-xl border border-slate-200 p-4"><h3 class="font-bold mb-1">${a}</h3><p class="text-sm text-slate-600">${b}</p></div>`).join('');
-  $('faqList').innerHTML = T('faq').map(([q,a])=>`<details class="bg-slate-50 rounded-xl border border-slate-200 p-4"><summary class="font-semibold cursor-pointer">${q}</summary><p class="text-sm text-slate-600 mt-2">${a}</p></details>`).join('');
+let activeFilter='all';
+function renderProducts(){
+ const list=products.filter(p=>{
+  if(activeFilter==='all')return true;
+  if(activeFilter==='available')return p.status==='live';
+  if(activeFilter==='upcoming')return p.status==='soon';
+  return p.category===activeFilter;
+ });
+ $('productGrid').innerHTML=list.map(productCard).join('');
+ observeReveals();
 }
-
 function openProduct(id){
-  const p = PRODUCTS.find(x=>x.id===id); if(!p) return;
-  $('mT').textContent = p.n[L];
-  const feats = p.f[L].length ? `<ul class="space-y-2">${p.f[L].map(x=>`<li class="flex gap-2 text-sm"><span class="text-emerald-600 font-bold">✓</span><span>${x}</span></li>`).join('')}</ul>` : `<p class="text-sm text-slate-500">${T('noFeat')}</p>`;
-  $('mB').innerHTML = `
-    <div class="flex items-center gap-3">${badge(p)}<span class="font-bold ltr">${p.price||''}</span></div>
-    <p class="text-slate-700">${p.t[L]}</p>
-    ${p.shots.length?`<div><h4 class="font-bold mb-2">${T('shotT')}</h4><div class="grid gap-3">${p.shots.map(s=>`<img src="${s}" alt="${p.n[L]}" loading="lazy" class="rounded-xl border border-slate-200 w-full" onerror="this.remove()">`).join('')}</div></div>`:''}
-    <div><h4 class="font-bold mb-2">${T('featT')}</h4>${feats}</div>
-    ${buyBtn(p,'block px-5 py-3 rounded-xl')}`;
-  $('modal').classList.remove('hidden');
-  document.body.style.overflow = 'hidden';
+ const p=products.find(x=>x.id===id);if(!p)return;
+ $('modalTitle').textContent=p.name;
+ const shots=p.shots.map(s=>`<img src="${s}" alt="${p.name} screenshot" loading="lazy" onerror="this.remove()">`).join('');
+ const features=p.features[lang].map(f=>`<div class="modalFeature">${f}</div>`).join('');
+ const buy=p.status==='live'?(p.url===STORE?`<a class="btn btn-primary" href="${STORE}" target="_blank" rel="noopener">${tr('storeLink')}</a>`:`<a class="btn btn-primary" href="${p.url}" target="_blank" rel="noopener">${tr('buy')}</a>`):'';
+ $('modalContent').innerHTML=`<p class="modalIntro">${p.desc[lang]}</p><div class="modalShots">${shots}</div><h4>${lang==='ar'?'ماذا يمكنك أن تفعل؟':'What can you do?'}</h4><div class="modalFeatures">${features}</div><div class="modalFoot">${buy}<a class="btn btn-ghost" href="${STORE}" target="_blank" rel="noopener">${tr('storeLink')}</a></div>`;
+ $('productModal').classList.add('open');document.body.style.overflow='hidden';$('modalClose').focus();
 }
-function closeModal(){ $('modal').classList.add('hidden'); document.body.style.overflow = ''; }
-
-document.addEventListener('click', e=>{
-  const b = e.target.closest('[data-p]'); if(b) openProduct(b.dataset.p);
-  if(e.target.id==='modal') closeModal();
-});
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
-$('mX').addEventListener('click', closeModal);
-$('lang').addEventListener('click', ()=>{ L = L==='en'?'ar':'en'; try{localStorage.setItem('lang',L)}catch(e){} render(); });
-render();
+function closeProduct(){$('productModal').classList.remove('open');document.body.style.overflow=''}
+$('langBtn').addEventListener('click',()=>{lang=lang==='en'?'ar':'en';try{localStorage.setItem('hmz-lang',lang)}catch(e){}applyLang()});
+$('menuBtn').addEventListener('click',()=>$('navlinks').classList.toggle('open'));
+$('navlinks').addEventListener('click',e=>{if(e.target.closest('a'))$('navlinks').classList.remove('open')});
+$('filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;activeFilter=b.dataset.filter;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));renderProducts()});
+$('productGrid').addEventListener('click',e=>{const b=e.target.closest('[data-details]');if(b)openProduct(b.dataset.details)});
+$('modalClose').addEventListener('click',closeProduct);$('productModal').addEventListener('click',e=>{if(e.target===$('productModal'))closeProduct()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeProduct()});
+let revealObserver;
+function observeReveals(){
+ if(!('IntersectionObserver'in window)){document.querySelectorAll('.reveal').forEach(x=>x.classList.add('visible'));return}
+ if(revealObserver)revealObserver.disconnect();
+ revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});
+ document.querySelectorAll('.reveal:not(.visible)').forEach(el=>revealObserver.observe(el));
+}
+applyLang();observeReveals();
 </script>
 </body>
 </html>
