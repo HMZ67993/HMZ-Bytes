@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HMZ-Bytes — Desktop software that keeps your files on your PC | برامج مكتبية تحفظ ملفاتك على جهازك</title>
 <meta name="description" content="Offline Windows desktop tools by Hamza Mansour. English & Arabic.">
+<link rel="icon" type="image/png" href="assets/brand/hmz-bytes-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
@@ -74,7 +75,7 @@ html{scroll-behavior:smooth}
 
 <footer class="bg-navy text-slate-400 text-sm">
   <div class="max-w-6xl mx-auto px-4 py-10 grid gap-6 md:grid-cols-3">
-    <div><div class="text-white font-bold mb-2">HMZ-Bytes</div><p id="fBio" class="text-xs leading-relaxed"></p></div>
+    <div><div class="mb-2"><img src="assets/brand/hmz-bytes-logo-white.png" alt="HMZ-Bytes" class="h-9 max-w-[160px] object-contain" onerror="this.replaceWith(document.createTextNode('HMZ-Bytes'))"></div><p id="fBio" class="text-xs leading-relaxed"></p></div>
     <div><div id="fPrivT" class="text-white font-bold mb-2"></div><p id="fPriv" class="text-xs leading-relaxed"></p></div>
     <div><div id="fPayT" class="text-white font-bold mb-2"></div><p id="fPay" class="text-xs leading-relaxed"></p></div>
   </div>
@@ -104,37 +105,37 @@ const STORE = 'https://hmzbytes.gumroad.com/';
 const BRAND_VIDEO = 'assets/videos/hmzbytes-intro.mp4';
 const BRAND_VIDEO_POSTER = 'assets/videos/hmzbytes-intro-poster.webp';
 const PRODUCTS = [
- { id:'pdf', status:'live', icon:'assets/icons/pdf-toolkit-pro.png', price:'$4.99+', url:'https://hmzbytes.gumroad.com/l/PDF-Toolkit-pro', yt:'',
+ { id:'pdf', status:'live', icon:'assets/icons/pdf-toolkit-pro.png', price:'$4.99+', url:'https://hmzbytes.gumroad.com/l/PDF-Toolkit-pro'
    shots:['assets/screenshots/pdf-toolkit-pro/01-main.webp','assets/screenshots/pdf-toolkit-pro/02-workspace.webp','assets/screenshots/pdf-toolkit-pro/03-feature-1.webp'],
    n:{en:'PDF Toolkit Pro',ar:'PDF Toolkit Pro'},
    t:{en:'Edit your PDFs fully offline on your own computer.',ar:'عدّل ملفات PDF بالكامل على جهازك وبدون إنترنت.'},
    f:{en:['15 tools: split, rotate, delete, reorder, merge with drag and drop','Compress: light, balanced, maximum, or a target size in MB','Images to PDF and PDF to images','Page numbers and watermark','True text redaction that removes sensitive text','AES-256 password protection, add or remove','Edit or clear metadata, extract text to TXT','OCR to searchable PDF or TXT, and batch up to 20 files (paid, OCR needs Tesseract)','English / Arabic switch, themes, light / dark / system mode, built-in guide in two languages','Free trial: 3 successful operations. Preview and undo are free'],
       ar:['15 أداة: تقسيم وتدوير وحذف وترتيب ودمج بالسحب والإفلات','ضغط: خفيف أو متوازن أو أقصى أو حجم مستهدف بالميغابايت','تحويل الصور إلى PDF وPDF إلى صور','ترقيم الصفحات وعلامة مائية','تعتيم نص حقيقي يحذف النص الحساس فعلياً','حماية بكلمة مرور AES-256 أو إزالتها','تعديل بيانات الملف أو مسحها واستخراج النص إلى TXT','OCR لملف PDF قابل للبحث أو TXT، ومعالجة دفعية حتى 20 ملفاً (مدفوع، وOCR يحتاج Tesseract)','تبديل عربي / إنجليزي وثيمات ووضع فاتح وداكن وتلقائي ودليل استخدام بلغتين','تجربة مجانية: 3 عمليات ناجحة. المعاينة والتراجع مجانيان']}},
- { id:'omni', status:'live', icon:'assets/icons/omni-calc-studio.png', price:'$0.99+', url:'https://hmzbytes.gumroad.com/l/OmniCalc-Studio', yt:'',
+ { id:'omni', status:'live', icon:'assets/icons/omni-calc-studio.png', price:'$0.99+', url:'https://hmzbytes.gumroad.com/l/OmniCalc-Studio'
    shots:['assets/screenshots/omni-calc-studio/01-main.webp','assets/screenshots/omni-calc-studio/02-workspace.webp','assets/screenshots/omni-calc-studio/03-feature-1.webp'],
    n:{en:'OmniCalc Studio',ar:'OmniCalc Studio'},
    t:{en:'Calculator, accounting tape and unit converter in one window.',ar:'حاسبة وشريط محاسبي ومحول وحدات في نافذة واحدة.'},
    f:{en:['Safe expression engine (no eval) with auto-closing parentheses and implied multiplication','Live result while you type','Collapsible scientific panel: trig in DEG/RAD, logs, powers, roots, factorial, 1/x, pi, e','+Tax, -Tax and -Disc% buttons with editable rates','Memory keys (MC, MR, M+, M-) and Ans','Accounting tape: timestamps, grand total, notes per line, reuse a result, export to TXT','Unit converter with 9 categories (Bit to Exabyte, network speed, length, weight, area, volume, time, speed, temperature) shown all at once, click a value to copy','6 color themes, light / dark, sizes S / M / L / XL, pin on top, auto-save of your state','Optional Win+R shortcut: type calc to open it, no admin rights'],
       ar:['محرك آمن للتعبيرات (بدون eval) مع إغلاق الأقواس تلقائياً والضرب الضمني','نتيجة فورية أثناء الكتابة','لوحة علمية قابلة للطي: مثلثات بالدرجات والراديان ولوغاريتمات وأسس وجذور ومضروب و1/x وباي وe','أزرار +Tax و-Tax و-Disc% بنسب قابلة للتعديل','مفاتيح الذاكرة (MC وMR وM+ وM-) وAns','شريط محاسبي: وقت كل عملية ومجموع كلي وملاحظة لكل سطر وإعادة استخدام النتيجة وتصدير TXT','محول وحدات بـ9 فئات (من Bit إلى Exabyte وسرعة الشبكة والطول والوزن والمساحة والحجم والوقت والسرعة والحرارة) تظهر كلها معاً مع نسخ القيمة بنقرة','6 ثيمات لونية ووضع فاتح وداكن وأحجام S / M / L / XL وتثبيت فوق النوافذ وحفظ تلقائي لحالتك','اختصار اختياري Win+R: اكتب calc لفتحها، بدون صلاحيات مسؤول']}},
- { id:'hub', status:'soon', icon:'assets/icons/smart-file-hub.png', price:'', url:'', yt:'',
+ { id:'hub', status:'soon', icon:'assets/icons/smart-file-hub.png', price:'', url:''
    shots:['assets/screenshots/smart-file-hub/01-main.webp','assets/screenshots/smart-file-hub/02-workspace.webp','assets/screenshots/smart-file-hub/03-feature-1.webp'],
    n:{en:'Smart File Hub',ar:'Smart File Hub'},
    t:{en:'Sort crowded folders, batch-rename files and remove duplicates, with full undo.',ar:'رتّب المجلدات المزدحمة وأعد تسمية الملفات وأزل المكررات مع تراجع كامل.'},
    f:{en:['Organize by file type, keywords in the name, or modification month','Smart sorting by content (Word, Excel, PDF) and real file-type detection','Custom rules and profiles you can save, import and export','Table or tree preview before anything runs, export the index to Excel or CSV','Smart rename patterns with {num}, {date}, {orig}, Arabic digits, Regex, case change, cleanup','Metadata: EXIF, ID3, Office properties; live preview that flags conflicts; drag and drop','Duplicates found by content, with choice of which copy to keep and action: recycle bin, move, or hard link','Clean empty, temporary and old files, and empty folders','Space reports by type, largest and oldest files, export to PDF, HTML, Excel','Full operation log, undo any operation, recoverable in-app trash','Automation (Pro): watch the Downloads folder and sort new files automatically','Arabic / English with RTL, 6 themes, keyboard shortcuts, first-run wizard, right-click folder menu','First 10 runs free, then purchase. Gumroad activation on up to 3 devices, works offline for 14 days after the last check']
       ,ar:['تنظيم حسب نوع الملف أو الكلمات المفتاحية في الاسم أو شهر التعديل','فرز ذكي حسب المحتوى (Word وExcel وPDF) والتعرف على النوع الحقيقي للملف','قواعد مخصصة وملفات شخصية تُحفظ وتُستورد وتُصدَّر','معاينة جدولية أو شجرية قبل التنفيذ وتصدير الفهرس إلى Excel أو CSV','أنماط إعادة تسمية بمتغيرات {num} و{date} و{orig} وأرقام عربية وRegex وتحويل حالة الأحرف وتنظيف','بيانات وصفية: EXIF وID3 وخصائص Office ومعاينة حية تكشف التعارضات وسحب وإفلات','كشف المكررات بالمحتوى مع اختيار النسخة المحتفظ بها والإجراء: سلة أو نقل أو رابط صلب','تنظيف الملفات الفارغة والمؤقتة والقديمة والمجلدات الفارغة','تقارير المساحة حسب النوع وأكبر الملفات وأقدمها وتصدير PDF وHTML وExcel','سجل كامل للعمليات وتراجع عن أي عملية وسلة خاصة بالتطبيق قابلة للاسترجاع','الأتمتة (Pro): مراقبة مجلد التنزيلات وترتيب الملفات الجديدة تلقائياً','عربي وإنجليزي مع RTL و6 ثيمات واختصارات لوحة المفاتيح ومعالج ترحيب وقائمة كليك يمين','أول 10 عمليات مجانية ثم الشراء. تفعيل Gumroad لـ3 أجهزة ويعمل بدون إنترنت 14 يوماً بعد آخر تحقق']}},
- { id:'cast', status:'live', icon:'assets/icons/screencast-pro.png', price:'', url:STORE, yt:'',
+ { id:'cast', status:'live', icon:'assets/icons/screencast-pro.png', price:'', url:STORE
    shots:['assets/screenshots/screencast-pro/01-main.webp','assets/screenshots/screencast-pro/02-workspace.webp','assets/screenshots/screencast-pro/03-feature-1.webp'],
    n:{en:'ScreenCast Pro',ar:'ScreenCast Pro'},
    t:{en:'Screen recording built for courses, tutorials and walkthroughs.',ar:'تسجيل شاشة مصمم للدورات والشروحات التعليمية.'},
    f:{en:['Record the full screen (multi-monitor), a custom region, or a single app window','Resolution and frame rate: 24 or 30 fps free, up to 60 fps and higher resolutions in Pro','Microphone and system audio together, webcam as a circle or rounded rectangle','The app and notes windows are kept out of the recording','Side command bar while recording: toggle live draw, cursor highlight, click display, mic, camera, notes and blur without stopping','Live draw on screen with 4 quick colors; mouse highlight and on-screen key presses','Floating teleprompter that viewers do not see in the video','Pro: auto-zoom on click and privacy blur; quick trim and export to MP4 or GIF','Global hotkeys, Arabic / English, light / dark / system, accent color, built-in guide (F1)'],
       ar:['تسجيل الشاشة كاملة (تعدد الشاشات) أو منطقة مخصصة أو نافذة تطبيق محددة','دقة ومعدل إطارات: 24 أو 30 إطاراً مجاناً وحتى 60 ودقات أعلى في Pro','صوت الميكروفون والنظام معاً وكاميرا ويب دائرية أو مستطيلة بحواف دائرية','نافذة البرنامج والملاحظات لا تظهر داخل التسجيل','شريط أوامر جانبي أثناء التسجيل: الرسم والإبراز وإظهار النقرات والميكروفون والكاميرا والملاحظات والتمويه بدون إيقاف التسجيل','رسم مباشر على الشاشة بـ4 ألوان سريعة وإبراز المؤشر وإظهار ضغطات لوحة المفاتيح','ملقّن عائم لا يظهر للمشاهدين في الفيديو','Pro: تقريب تلقائي عند النقر وتمويه الخصوصية وقص سريع وتصدير MP4 أو GIF','اختصارات عامة وعربي / إنجليزي وفاتح وداكن وتلقائي ولون تمييز ودليل مدمج (F1)']}},
- { id:'img', status:'live', icon:'assets/icons/image-toolkit-pro.png', price:'', url:STORE, yt:'',
+ { id:'img', status:'live', icon:'assets/icons/image-toolkit-pro.png', price:'', url:STORE
    shots:['assets/screenshots/image-toolkit-pro/01-main.webp','assets/screenshots/image-toolkit-pro/02-workspace.webp','assets/screenshots/image-toolkit-pro/03-feature-1.webp'],
    n:{en:'Image Toolkit Pro',ar:'Image Toolkit Pro'},
    t:{en:'Compress, convert, resize and edit images in batches, offline.',ar:'اضغط وحوّل وغيّر حجم الصور وعدّلها دفعة واحدة وبدون إنترنت.'},
    f:{en:['Compress to a quality or a target size in KB','Convert JPG, PNG, WebP, HEIC, BMP, TIFF, GIF, ICO and PDF','Resize by percent, width, height or exact size, with presets for Instagram, Stories, Facebook, YouTube, X, Full HD and 4K','Crop by ratio, exact size, edges, or as a transparent circle','Rotate, flip, and text (Arabic supported) or logo watermark','Remove background by solid color or GrabCut','Brightness, contrast, saturation, sharpness, blur, auto-enhance and 10 filters; upscale 2x to 4x','Meme maker, images to PDF, and metadata (EXIF, location) removal','Batch edit: resize, watermark, compress, convert and rename in one pass','Drag and drop files and folders, before / after preview, progress and cancel, results table','Originals are never modified; phone photo orientation fixed automatically','Free: up to 10 images at a time. Pro unlocks more tools and a higher limit'],
       ar:['ضغط بجودة محددة أو بحجم مستهدف بالكيلوبايت','تحويل JPG وPNG وWebP وHEIC وBMP وTIFF وGIF وICO وPDF','تغيير الحجم بالنسبة أو العرض أو الارتفاع أو مقاس دقيق مع مقاسات جاهزة لإنستجرام وستوري وفيسبوك ويوتيوب وX وFull HD و4K','قص بنسبة أبعاد أو مقاس دقيق أو من الحواف أو على شكل دائرة شفافة','تدوير وقلب وعلامة مائية نصية (تدعم العربي) أو بشعار','إزالة الخلفية بلون موحد أو GrabCut','سطوع وتباين وتشبع وحدة وتمويه وتحسين تلقائي و10 فلاتر وتكبير من 2x إلى 4x','صانع ميمز وتحويل الصور إلى PDF وحذف البيانات الوصفية (EXIF والموقع)','تحرير بالجملة: تغيير حجم وعلامة مائية وضغط وتحويل وإعادة تسمية في خطوة واحدة','سحب وإفلات ملفات ومجلدات ومعاينة قبل / بعد وشريط تقدم وإلغاء وجدول نتائج','الأصل لا يتعدّل أبداً واتجاه صور الموبايل يُصلَّح تلقائياً','مجاني: حتى 10 صور في المرة. الـPro يفتح أدوات أكثر وحداً أعلى']}},
- { id:'vid', status:'soon', icon:'assets/icons/video-studio.png', price:'', url:'', yt:'',
+ { id:'vid', status:'soon', icon:'assets/icons/video-studio.png', price:'', url:''
    shots:['assets/screenshots/video-studio/01-main.webp','assets/screenshots/video-studio/02-workspace.webp','assets/screenshots/video-studio/03-feature-1.webp'],
    n:{en:'Video Studio',ar:'Video Studio'},
    t:{en:'Multi-track video editor for your desktop.',ar:'برنامج مونتاج فيديو متعدد المسارات لسطح المكتب.'},
@@ -244,7 +245,6 @@ function openProduct(id){
   $('mB').innerHTML = `
     <div class="flex items-center gap-3">${badge(p)}<span class="font-bold ltr">${p.price||''}</span></div>
     <p class="text-slate-700">${p.t[L]}</p>
-    ${p.yt?`<iframe class="w-full aspect-video rounded-xl" src="https://www.youtube.com/embed/${p.yt}" title="${T('vidOne')}" allowfullscreen></iframe>`:''}
     ${p.shots.length?`<div><h4 class="font-bold mb-2">${T('shotT')}</h4><div class="grid gap-3">${p.shots.map(s=>`<img src="${s}" alt="${p.n[L]}" loading="lazy" class="rounded-xl border border-slate-200 w-full" onerror="this.remove()">`).join('')}</div></div>`:''}
     <div><h4 class="font-bold mb-2">${T('featT')}</h4>${feats}</div>
     ${buyBtn(p,'block px-5 py-3 rounded-xl')}`;
