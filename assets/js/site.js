@@ -115,7 +115,10 @@ function openProduct(id,updateHash){
  $('modalCategory').textContent=(p.categoryLabel?.[lang]||'')+' · '+(p.status==='live'?t('productAvailable'):t('productSoon'));
  $('modalTitle').textContent=p.name+(p.version?' '+p.version:'');
  const mainImage=(p.cover&&p.cover[0])?'<img class="modal-main-image" src="'+escapeHtml(p.cover[0])+'" alt="'+escapeHtml(p.name)+'" loading="eager">':'';
- const gallery=(p.cover||[]).slice(1,4).map((src,i)=>'<img src="'+escapeHtml(src)+'" alt="'+escapeHtml(p.name)+' '+(i+2)+'" loading="lazy" decoding="async">').join('');
+ const screenshotNames=['01-main.webp','02-workspace.webp','03-feature-1.webp','04-feature-2.webp','05-settings.webp'];
+ const localScreens=(p.screenshotDir?screenshotNames.map(name=>p.screenshotDir+name):[]);
+ const gallerySources=localScreens.concat((p.cover||[]).slice(1,4));
+ const gallery=gallerySources.map((src,i)=>'<img src="'+escapeHtml(src)+'" alt="'+escapeHtml(p.name)+' '+(i+1)+'" loading="lazy" decoding="async" onerror="this.remove()">').join('');
  const groups=(p.groups||[]).map(g=>'<section class="feature-group"><h3>'+escapeHtml(g.title?.[lang]||'')+'</h3><ul>'+(g.items?.[lang]||[]).map(x=>'<li>'+escapeHtml(x)+'</li>').join('')+'</ul></section>').join('');
  const notes=(p.notes?.[lang]||[]).length?'<details class="modal-notes"><summary>'+t('notesTitle')+'</summary><ul>'+(p.notes[lang].map(x=>'<li>'+escapeHtml(x)+'</li>').join(''))+'</ul></details>':'';
  const buy=p.status==='live'?'<a class="button button-primary" href="'+escapeHtml(p.url)+'" target="_blank" rel="noopener">'+t('viewBuy')+'</a>':'<span class="button button-outline button-disabled">'+t('upcomingCta')+'</span>';

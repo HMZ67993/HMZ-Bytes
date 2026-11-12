@@ -31,12 +31,12 @@ Each folder maps to the product ID used in `data/products.js`:
 | OmniCalc Studio | `assets/screenshots/omni-calc-studio/` |
 | ScreenCast Pro | `assets/screenshots/screencast-pro/` |
 | Image Toolkit Pro | `assets/screenshots/image-toolkit-pro/` |
-| HMZ Video Studio Pro | `assets/screenshots/hmz-video-studio-pro/` (or update the product's screenshotDir) |
+| HMZ Video Studio Pro | `assets/screenshots/video-studio/` |
 | Smart File Hub | `assets/screenshots/smart-file-hub/` |
 
 Suggested names: `01-main.webp`, `02-workspace.webp`, `03-feature-1.webp`, `04-feature-2.webp`, `05-settings.webp`.
 
-The current product cards and detail galleries use the published Gumroad cover images. These local screenshots are optional additional material; when adding them, update the relevant product's `cover` or screenshot data in `data/products.js` as needed.
+The current product cards use the published Gumroad cover images. Product detail galleries automatically look for the five local screenshot filenames listed above inside each product folder; upload any of them and they will appear without changing the JavaScript. Remaining gallery slots use the product's Gumroad covers.
 
 Recommended screenshot size: 1600×900 or a similar 16:9 ratio. Use clear captures of the real app UI.
 
