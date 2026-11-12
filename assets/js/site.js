@@ -63,8 +63,8 @@ function priceMarkup(p){
 }
 function coverMarkup(p,cls){
  const src=(p.cover&&p.cover[0])||'';
- return '<div class="'+cls+'">'+
-  '<span class="product-icon-fallback">'+escapeHtml(p.name.slice(0,1))+'</span>'+
+ const coverClass=src?'has-cover':'no-cover';
+ return '<div class="'+cls+' '+coverClass+'">'+
   (src?'<img class="cover-image" src="'+escapeHtml(src)+'" alt="'+escapeHtml(p.name)+'" loading="lazy" decoding="async" onerror="this.remove()">':'')+
   '<span class="product-status '+(p.status==='soon'?'soon':'')+'">'+(p.status==='live'?t('available'):t('coming'))+'</span>'+
   (p.icon?'<img class="product-cover-icon" src="'+escapeHtml(p.icon)+'" alt="" loading="lazy" decoding="async" onerror="this.remove()">':'')+
