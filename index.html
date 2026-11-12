@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('hmz-site-theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
   <link rel="stylesheet" href="assets/css/site.css">
   <title>HMZ-Bytes — Your work. Your tools. Your control.</title>
 </head>
@@ -20,7 +21,7 @@
 <header class="site-header">
   <div class="container nav-shell">
     <a class="brand" href="#top" aria-label="HMZ-Bytes home">
-      <img src="assets/brand/hmz-bytes-logo-white.png" alt="HMZ-Bytes" onerror="this.hidden=true">
+      <img src="assets/brand/hmz-bytes-logo-white.png" data-theme-logo data-dark-src="assets/brand/hmz-bytes-logo-white.png" data-light-src="assets/brand/hmz-bytes-logo.png" alt="HMZ-Bytes" onerror="this.hidden=true">
       <span class="brand-fallback">HMZ-Bytes</span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation">☰</button>
@@ -33,6 +34,7 @@
     </nav>
     <div class="nav-actions">
       <button class="language-toggle" id="languageToggle" type="button">العربية</button>
+      <button class="language-toggle theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode">☀ Light</button>
       <a class="button button-primary button-small" href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" data-i18n="navStore">Visit Store ↗</a>
     </div>
   </div>
@@ -193,7 +195,7 @@
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div class="footer-brand"><img src="assets/brand/hmz-bytes-logo-white.png" alt="HMZ-Bytes" onerror="this.hidden=true"><p data-i18n="footerBio">Independent Windows software, thoughtfully made by Hamza Mansour.</p></div>
+    <div class="footer-brand"><img src="assets/brand/hmz-bytes-logo-white.png" data-theme-logo data-dark-src="assets/brand/hmz-bytes-logo-white.png" data-light-src="assets/brand/hmz-bytes-logo.png" alt="HMZ-Bytes" onerror="this.hidden=true"><p data-i18n="footerBio">Independent Windows software, thoughtfully made by Hamza Mansour.</p></div>
     <div><h3 data-i18n="footerExplore">Explore</h3><a href="#products" data-i18n="navProducts">Products</a><a href="#why" data-i18n="navWhy">Why HMZ-Bytes</a><a href="#studio" data-i18n="navStudio">Studio</a></div>
     <div><h3 data-i18n="footerHelp">Help & information</h3><a href="#faq" data-i18n="navFaq">FAQ</a><a href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener" data-i18n="footerSupport">Store & support</a><a href="#privacy" data-i18n="navPrivacy">Privacy</a></div>
     <div><h3 data-i18n="footerStore">Official store</h3><a href="https://hmzbytes.gumroad.com/" target="_blank" rel="noopener">hmzbytes.gumroad.com ↗</a><p data-i18n="footerPayment">Purchases and license delivery are handled through Gumroad.</p></div>

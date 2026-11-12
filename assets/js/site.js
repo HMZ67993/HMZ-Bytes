@@ -52,8 +52,10 @@ const UI={
   featureTitle:'ماذا يستطيع أن يفعل؟',audienceTitle:'مناسب لـ',notesTitle:'تفاصيل مهمة وحدود الاستخدام',viewBuy:'عرض المنتج على Gumroad ↗',upcomingCta:'قريباً',galleryAlt:'صورة المنتج',noImage:'معاينة الصورة',storeOther:'زيارة متجر HMZ-Bytes ↗',productAvailable:'متاح الآن',productSoon:'قريباً'
  }
 };
-let lang='en',activeFilter='all',lastFocus=null;
+let lang='en',activeFilter='all',lastFocus=null,theme='dark';
 try{lang=localStorage.getItem('hmz-site-language')||((navigator.language||'').toLowerCase().startsWith('ar')?'ar':'en')}catch(e){}
+try{theme=localStorage.getItem('hmz-site-theme')||'dark'}catch(e){}
+document.documentElement.dataset.theme=theme;
 const t=key=>UI[lang][key]??key;
 const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const money=cents=>'$'+(Number(cents||0)/100).toFixed(2);
@@ -107,7 +109,24 @@ function setLanguage(next){
  document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if(UI[lang][key]!==undefined)el.textContent=UI[lang][key]});
  document.querySelectorAll('[data-i18n-html]').forEach(el=>{const key=el.getAttribute('data-i18n-html');if(UI[lang][key]!==undefined)el.innerHTML=UI[lang][key]});
  $('languageToggle').textContent=lang==='ar'?'English':'العربية';
- renderProducts();renderFaq();
+ renderProducts();renderFaq();updateThemeControl();
+}
+function updateThemeControl(){
+ const btn=$('themeToggle');if(!btn)return;
+ const switchingToLight=theme!=='light';
+ btn.textContent=lang==='ar'?(switchingToLight?'☀ فاتح':'☾ داكن'):(switchingToLight?'☀ Light':'☾ Dark');
+ const label=lang==='ar'?(switchingToLight?'تفعيل الوضع الفاتح':'تفعيل الوضع الداكن'):(switchingToLight?'Switch to light mode':'Switch to dark mode');
+ btn.setAttribute('aria-label',label);btn.setAttribute('title',label);
+}
+function setTheme(next){
+ theme=next==='light'?'light':'dark';
+ document.documentElement.dataset.theme=theme;
+ try{localStorage.setItem('hmz-site-theme',theme)}catch(e){}
+ document.querySelectorAll('[data-theme-logo]').forEach(img=>{
+  const source=img.getAttribute(theme==='light'?'data-light-src':'data-dark-src');
+  if(source)img.src=source;
+ });
+ updateThemeControl();
 }
 function openProduct(id,updateHash){
  const p=products.find(x=>x.id===id);if(!p)return;
@@ -156,6 +175,7 @@ $('productFilters').addEventListener('click',e=>{
 });
 $('productGrid').addEventListener('click',e=>{const btn=e.target.closest('[data-open-product]');if(btn)openProduct(btn.dataset.openProduct)});
 $('languageToggle').addEventListener('click',()=>setLanguage(lang==='en'?'ar':'en'));
+$('themeToggle').addEventListener('click',()=>setTheme(theme==='dark'?'light':'dark'));
 $('menuToggle').addEventListener('click',()=>{const open=$('siteNav').classList.toggle('open');$('menuToggle').setAttribute('aria-expanded',String(open))});
 $('siteNav').addEventListener('click',e=>{if(e.target.closest('a')){$('siteNav').classList.remove('open');$('menuToggle').setAttribute('aria-expanded','false')}});
 $('modalClose').addEventListener('click',closeProduct);
@@ -163,7 +183,7 @@ $('productModal').addEventListener('click',e=>{if(e.target.matches('[data-close-
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('productModal').classList.contains('open'))closeProduct()});
 $('year').textContent=new Date().getFullYear();
 document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.body.dir=lang==='ar'?'rtl':'ltr';
-applyTranslations();$('languageToggle').textContent=lang==='ar'?'English':'العربية';renderProducts();renderFaq();observeReveals();
+applyTranslations();$('languageToggle').textContent=lang==='ar'?'English':'العربية';setTheme(theme);renderProducts();renderFaq();observeReveals();
 if(location.hash.startsWith('#app/'))openProduct(location.hash.slice(5),false);
 const brandVideo=$('brandVideo');if(brandVideo)brandVideo.addEventListener('error',()=>{$('videoUnavailable').hidden=false});
 })();
