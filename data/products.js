@@ -772,7 +772,7 @@ window.HMZ_CATALOG = {
       "category": "productivity",
       "url": "https://hmzbytes.gumroad.com/l/Smart-File-Hub",
       "icon": "assets/icons/smart-file-hub.png",
-      "cover": [],
+      "cover": ["https://public-files.gumroad.com/kdl6x5a5rzz8chvxgnvm2fn07h7j"],
       "screenshotDir": "assets/screenshots/smart-file-hub/",
       "price": {
         "minimum": 999,
