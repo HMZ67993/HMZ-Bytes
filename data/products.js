@@ -1,6 +1,6 @@
 /* HMZ-Bytes product catalog. Update this file when a product changes or a new app is released. */
 window.HMZ_CATALOG = {
-  "updated": "2026-11-12",
+  "updated": "2026-11-14",
   "currency": "USD",
   "license": {
     "en": "Gumroad licenses support up to 2 devices and require online verification every 7 days. Direct licenses issued by HMZ-Bytes are verified every 14 days.",
@@ -768,13 +768,18 @@ window.HMZ_CATALOG = {
     {
       "id": "smart-file-hub",
       "name": "Smart File Hub",
-      "status": "soon",
+      "status": "live",
       "category": "productivity",
       "url": "https://hmzbytes.gumroad.com/l/Smart-File-Hub",
       "icon": "assets/icons/smart-file-hub.png",
       "cover": [],
       "screenshotDir": "assets/screenshots/smart-file-hub/",
-      "price": null,
+      "price": {
+        "minimum": 999,
+        "suggested": 1299,
+        "currency": "USD",
+        "payWhatYouWant": true
+      },
       "categoryLabel": {
         "en": "File Organization",
         "ar": "تنظيم الملفات"
@@ -784,8 +789,8 @@ window.HMZ_CATALOG = {
         "ar": "نظّم بذكاء. أعد التسمية بالجملة. اكتشف المكررات."
       },
       "summary": {
-        "en": "An upcoming Windows file-management workspace for content-aware organization, advanced batch renaming, duplicate detection, storage reports and automation.",
-        "ar": "مساحة قادمة لإدارة ملفات Windows، تشمل التنظيم حسب المحتوى وإعادة التسمية المتقدمة واكتشاف المكررات وتقارير المساحة والأتمتة."
+        "en": "A complete Windows file workspace to organize by content, batch-rename files, find true duplicates, analyze storage, automate cleanup and undo changes.",
+        "ar": "مساحة متكاملة لإدارة ملفات Windows: تنظيم حسب المحتوى، إعادة تسمية جماعية، كشف المكررات الحقيقية، تحليل المساحة، أتمتة التنظيف والتراجع عن التغييرات."
       },
       "highlights": {
         "en": [
@@ -799,7 +804,7 @@ window.HMZ_CATALOG = {
           "كشف المكررات"
         ]
       },
-      "platform": "Windows",
+      "platform": "Windows 10 / 11",
       "groups": [
         {
           "title": {
@@ -863,12 +868,8 @@ window.HMZ_CATALOG = {
         }
       ],
       "notes": {
-        "en": [
-          "This product is currently unpublished on Gumroad and is shown as coming soon. No purchase button is displayed yet."
-        ],
-        "ar": [
-          "هذا المنتج غير منشور حالياً على Gumroad ويظهر بحالة قريباً. لن يظهر زر شراء قبل نشره."
-        ]
+        "en": [],
+        "ar": []
       },
       "audience": {
         "en": "Anyone managing crowded work folders, large downloads, repeated filenames or duplicate files.",
