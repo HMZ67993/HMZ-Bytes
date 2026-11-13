@@ -20,7 +20,7 @@ const UI={
   faq:[
    ['Where can I buy an app?','Use the “View on Gumroad” button on any available product. Payment, downloads and Gumroad license delivery are handled on Gumroad.'],
    ['What does “Pay what you want” mean?','Each published listing has a minimum price. Gumroad lets you pay that amount or choose a higher amount; the suggested amount is optional.'],
-   ['Are all the apps available now?','Five products are currently published. Smart File Hub is still unpublished and is marked Coming Soon. Availability is updated from the product catalog in this site.'],
+   ['Are all the apps available now?','All six current HMZ-Bytes products are published and available on Gumroad. Availability and prices are reflected in the product catalog on this site.'],
    ['Do the apps work offline?','File processing and core workflows are local where stated. Internet may be required for license verification, updates, app catalogs or downloading AI models on first use.'],
    ['How does Gumroad activation work?','The current Gumroad product listings specify up to two devices and online verification every seven days. Direct licenses issued by HMZ-Bytes use a 14-day verification interval.'],
    ['Does OmniCalc POS process card or wallet payments?','No. The POS workspace stores products, invoices and payment records locally; it is not a payment gateway.'],
@@ -43,7 +43,7 @@ const UI={
   faq:[
    ['أين أستطيع شراء التطبيق؟','استخدم زر «عرض على Gumroad» في أي منتج متاح. تتم المدفوعات والتنزيلات وتسليم تراخيص Gumroad عبر Gumroad.'],
    ['ماذا يعني «ادفع السعر الذي تختاره»؟','لكل منتج منشور حد أدنى للسعر. يمكنك دفع هذا المبلغ أو اختيار مبلغ أعلى؛ السعر المقترح اختياري.'],
-   ['هل جميع التطبيقات متاحة الآن؟','هناك خمسة منتجات منشورة حالياً. أما Smart File Hub فما زال غير منشور ويظهر بحالة قريباً. يتم تحديث التوافر من كتالوج المنتجات في الموقع.'],
+   ['هل جميع التطبيقات متاحة الآن؟','التطبيقات الستة الحالية من HMZ-Bytes منشورة ومتاحة على Gumroad. يعرض الموقع حالة التوافر والأسعار وفق كتالوج المنتجات.'],
    ['هل تعمل التطبيقات دون إنترنت؟','تتم معالجة الملفات وسير العمل الأساسي محلياً حيثما ذُكر ذلك. وقد يلزم الإنترنت للتحقق من الترخيص والتحديثات ودليل التطبيقات أو تنزيل نماذج الذكاء الاصطناعي عند الاستخدام الأول.'],
    ['كيف يعمل تفعيل Gumroad؟','توضح قوائم Gumroad الحالية أن الترخيص يدعم حتى جهازين ويتطلب التحقق عبر الإنترنت كل سبعة أيام. أما التراخيص المباشرة من HMZ-Bytes فيتم التحقق منها كل 14 يوماً.'],
    ['هل تعالج نقطة البيع في OmniCalc مدفوعات البطاقات أو المحافظ؟','لا. مساحة نقطة البيع تحفظ المنتجات والفواتير وسجلات الدفع محلياً، لكنها ليست بوابة دفع.'],
